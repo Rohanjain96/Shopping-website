@@ -127,7 +127,6 @@ body
     max-width:100%;
     line-height: 40px;
     background-color: rgba(0, 87, 128, 0.775);
-    margin-top: 5px;
 }
 
 .navigation ul{
@@ -215,15 +214,21 @@ body
  .product-slider
  {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
     height:370px;
     overflow: hidden;
-    margin: 15px 0;
+    align-items: center;
     background-color: rgb(30, 145, 133);
+    margin: 15px 0;
+}
+.product-slider .slider-items
+{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
  }
- .product-slider .product
+ .product-slider .slider-items .product
  {
     max-width: 300px;
     height: 350px;
@@ -234,7 +239,6 @@ body
     transition: all 0.7s ease-in-out;
     box-shadow: 2px 2px 2px black ;
 }
-
 
  .product-slider .product ul
  {
@@ -280,7 +284,7 @@ body
      background-color: rgb(241, 248, 248);
      justify-content: center;
      align-items: center;
-     top:40%;
+     top:35%;
      font-size: 1.4rem;
      font-weight: bold;
      color: rgb(238, 49, 80);
@@ -307,8 +311,9 @@ body
 #left-slider-btn:hover
  {
     opacity: 1;
- }
-    @media screen and (max-width:1260px)
+}
+
+@media screen and (max-width:1260px)
 {
     .header .Addtocart::before
     {
@@ -320,16 +325,48 @@ body
         right:16px;
     }
 }
-@media screen and (max-width:690px) {
+@media screen and (max-width:950px)
+{
+    .header .Addtocart::before
+    {
+        right: 9px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:11px;
+    }
+}
+@media screen and (max-width:800px)
+{
+    .header .Addtocart::before
+    {
+        right: 7px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:9px;
+    }
+}
+@media screen and (max-width:750px) {
     .header .search-box
     {
-        min-width: 40%;
-        margin-left: 10px;
+        min-width: 60%;
         
     }
     .header .bars
     {
         display: block;
+    }
+    .header .Addtocart::before
+    {
+        right: 11px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:13px;
     }
     .navigation 
     {
@@ -338,20 +375,29 @@ body
     
     
 }
-@media screen and (max-width:450px) {
+@media screen and (max-width:700px) {
     .header label
     {
         margin-left: 10px;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
     .header .search-box
     {
-        min-width: 30%;
+        min-width: 50%;
     }
     
     .header .bars
     {
         display: block;
+    }
+    .header .Addtocart ::before
+    {
+        right: 0px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:13px;
     }
     .navigation
     {
@@ -363,7 +409,82 @@ body
     }
 }
 
-@media screen and (max-width:410px) {
+@media screen and (max-width:595px) {
+    .product-slider
+    {
+        display: flex;
+        align-items: flex-start;
+        overflow-x: auto;
+    }
+    .product-slider .slider-items
+    {
+        flex-wrap: nowrap;
+    }
+    .product-slider .slider-items .product
+    {
+        min-width: 340px;
+        margin: 5px 5px;
+    }
+    #right-slider-btn,#left-slider-btn
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width:450px) {
+    
+    .header{
+        position: relative;
+        height: 90px;
+        justify-content: space-around;
+        font-size: 1.2rem;
+    }
+    .header label
+    {
+        margin-left: 2px;
+        font-size: 1.2rem;
+    }
+    .header .search-box
+    {
+        position: absolute;
+        width:94%;
+        height: 20px;
+        top:50px;
+        margin: 15px 10px;
+        
+    }
+    .header .search-box input
+    {
+        margin-bottom: 20px;
+    }
+    .header .search-box .search-icon
+    {
+        margin-bottom: 20px;
+    }
+    .header .bars
+    {
+        display: block;
+    }
+        .navigation .bars
+    {
+        display: none;
+    }
+    .header .Addtocart::before
+    {
+        right: 14px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:17px;
+    }
+    .product-slider .slider-items .product
+    {
+        min-width: 300px;
+        margin: 5px 5px;
+    }
+}
+@media screen and (max-width:315px) {
     
     .header{
         position: relative;
@@ -371,7 +492,11 @@ body
         justify-content: space-around;
         font-size: 1.4rem;
     }
-    
+    .header label
+    {
+        margin-left: 4px;
+        font-size: 1.2rem;
+    }
     .header .search-box
     {
         position: absolute;
@@ -405,5 +530,10 @@ body
     .header .Addtocart .counter
     {
         right:11px;
+    }
+    .product-slider .slider-items .product
+    {
+        min-width: 240px;
+        margin: 5px 5px;
     }
 }
