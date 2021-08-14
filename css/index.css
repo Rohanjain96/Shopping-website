@@ -495,11 +495,12 @@ body
     {
         display: flex;
         align-items: flex-start;
-        overflow-x: auto;
+       
     }
     .product-slider .slider-items
     {
         flex-wrap: nowrap;
+        overflow-x: auto;
     }
     .product-slider .slider-items .Laptop
     {
@@ -611,6 +612,10 @@ body
     .header .Addtocart .counter
     {
         right:11px;
+    }
+    .product-slider .slider-items
+    {
+        margin-top:50px;
     }
     .product-slider .slider-items .Laptop
     {
