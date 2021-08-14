@@ -501,6 +501,7 @@ body
     {
         flex-wrap: nowrap;
         overflow-x: auto;
+        margin-top: 50px;
     }
     .product-slider .slider-items .Laptop
     {
