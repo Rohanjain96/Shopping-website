@@ -8,6 +8,11 @@
     <script src="https://use.fontawesome.com/0a0b34b77d.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@0,400;1,300;1,900&display=swap"
+        rel="stylesheet">
     <title>Shopping Website</title>
 </head>
 
@@ -133,97 +138,172 @@
             </div>
         </div>
         <div class="product-slider" id="slider">
-            <span id="left-slider-btn" onclick="leftclicked()">&#8249</span>
-            <span id="right-slider-btn" onclick="rightclicked()">&#8250</span>
+            <h3 class="Product-category">LAPTOPS</h3>
+            <div id="left-slider-btn" onclick="leftclicked()">&#8249</div>
+            <div id="right-slider-btn" onclick="rightclicked()">&#8250</div>
             <div class="slider-items" id="slider-items">
-                <div class="product" id="item-1">
-                    <div class="product-image">
+                <div class="Laptop" id="item-1">
+                    <ul class="actions">
+                        <li>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"
+                                onclick="addtocart(this.parentElement.parentElement.parentElement)"></i>
+                        </li>
+                    </ul>
+                    <div class="Laptop-image">
                         <img src="images/laptop1.png" alt="">
                     </div>
-                    <div class="product-details" >
-                        <h3 class="product-model">V14 35.56cms-Black</h3>
+                    <div class="Laptop-details">
+                        <h3 class="Laptop-model">Lenovo V14 35.56cms(Black)</h3>
+                        <div class="price">
+                            <i class="fa fa-inr"></i>30,599
+                        </div>
                         <ul>
-                            <li class="product-features">35.56cms(15.6inches) anti-glare display</li>
-                            <li class="product-features">1 TB 5400 HDD</li>
-                            <li class="product-features">11th Generation Intel® Core™ i3-1115G4 Processor (2 Cores / 4 Threads,
+                            <li class="Laptop-features">35.56cms(15.6inches) anti-glare display</li>
+                            <li class="Laptop-features">1 TB 5400 HDD</li>
+                            <li class="Laptop-features">11th Generation Intel® Core™ i3-1115G4 Processor (2 Cores / 4
+                                Threads,
                                 3.00 GHz, up to 4.10 GHz with Turbo Boost, 6 MB Cache)</li>
                         </ul>
                     </div>
                 </div>
-    
-                <div class="product" id="item-2">
-                    <div class="product-image">
-                        <img src="images/laptop1.png" alt="">
+                <div class="Laptop" id="item-2">
+                    <ul class="actions">
+                        <li>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"
+                                onclick="addtocart(this.parentElement.parentElement.parentElement)"></i>
+                        </li>
+                    </ul>
+                    <div class="Laptop-image">
+                        <img src="images/laptop2.png" alt="">
                     </div>
-                    <div class="product-details" >
-                    <h3 class="product-model">V14 35.56cms-Black</h3>
+                    <div class="Laptop-details">
+                        <h3 class="Laptop-model">Lenovo Ideapad slim 5(15,AMD)</h3>
+                        <div class="price">
+                            <i class="fa fa-inr"></i>45,999
+                        </div>
                         <ul>
-                            <li class="product-features">35.56cms(15.6inches) anti-glare display</li>
-                            <li class="product-features">1 TB 5400 HDD</li>
-                            <li class="product-features">11th Generation Intel® Core™ i3-1115G4 Processor (2 Cores / 4 Threads,
-                                3.00 GHz, up to 4.10 GHz with Turbo Boost, 6 MB Cache)</li>
+                            <li class="Laptop-features">39.6cms (15.6) FHD (1920 x 1080) IPS, 300 nits, 45% NTSC</li>
+                            <li class="Laptop-features">Up to 256GB + 1TB HDD SATA dual storage</li>
+                            <li class="Laptop-features">Up to AMD Ryzen 7 4800U mobile processor with Radeon™
+                                graphics</li>
                         </ul>
                     </div>
                 </div>
-                <div class="product" id="item-3">
-                    <div class="product-image">
-                        <img src="images/laptop1.png" alt="">
+                <div class="Laptop" id="item-3">
+                    <ul class="actions">
+                        <li>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"
+                                onclick="addtocart(this.parentElement.parentElement.parentElement)"></i>
+                        </li>
+                    </ul>
+                    <div class="Laptop-image">
+                        <img src="images/laptop3.png" alt="">
                     </div>
-                    <div class="product-details" >
-                        <h3 class="product-model">V14 35.56cms-grey</h3>
+                    <div class="Laptop-details">
+                        <h3 class="Laptop-model">Lenovo IdeaPad Slim 3i (14,11th Gen Intel)</h3>
+                        <div class="price">
+                            <i class="fa fa-inr"></i>50,399
+                        </div>
                         <ul>
-                            <li class="product-features">35.56cms(15.6inches) anti-glare display</li>
-                            <li class="product-features">1 TB 5400 HDD</li>
-                            <li class="product-features">11th Generation Intel® Core™ i3-1115G4 Processor (2 Cores / 4 Threads,
-                                3.00 GHz, up to 4.10 GHz with Turbo Boost, 6 MB Cache)</li>
+                            <li class="Laptop-features">35.56cms (14.0) FHD (1920x1080) IPS 300nits Anti-glare, 45%
+                                NTSC</li>
+                            <li class="Laptop-features">512 GB M.2 2280 SSD</li>
+                            <li class="Laptop-features"> i5 11th Generation i5-1135G7 Processor (4 Cores/8
+                                Threads,2.40 GHz,up to 4.20 GHz with Turbo Boost,8 MB Cache)</li>
                         </ul>
                     </div>
                 </div>
-                <div class="product" id="item-4">
-                    <div class="product-image">
-                        <img src="images/laptop1.png" alt="">
+                <div class="Laptop" id="item-4">
+                    <ul class="actions">
+                        <li>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"
+                                onclick="addtocart(this.parentElement.parentElement.parentElement)"></i>
+                        </li>
+                    </ul>
+                    <div class="Laptop-image">
+                        <img src="images/laptop4.png" alt="">
                     </div>
-                    <div class="product-details" >
-                        <h3 class="product-model">V14 35.56cms-Black</h3>
+                    <div class="Laptop-details">
+                        <h3 class="Laptop-model">HP Laptop 14s- er0503TU</h3>
+                        <div class="price">
+                            <i class="fa fa-inr"></i>31,999
+                        </div>
                         <ul>
-                            <li class="product-features">35.56cms(15.6inches) anti-glare display</li>
-                            <li class="product-features">1 TB 5400 HDD</li>
-                            <li class="product-features">11th Generation Intel® Core™ i3-1115G4 Processor (2 Cores / 4 Threads,
-                                3.00 GHz, up to 4.10 GHz with Turbo Boost, 6 MB Cache)</li>
+                            <li class="Laptop-features">35.56 cm (14) diagonal FHD, IPS, BrightView, micro-edge,
+                                WLED-backlit, 250 nits, 45% NTSC (1920 x 1080)</li>
+                            <li class="Laptop-features">512 GB PCIe® NVMe™ M.2 SSD</li>
+                            <li class="Laptop-features">10th Generation Intel® Core™ i5 processor</li>
                         </ul>
                     </div>
                 </div>
-                <div class="product"  id="item-5">
-                <div class="product-image">
-                    <img src="images/laptop1.png" alt="">
-                </div>
-                    <div class="product-details">
-                    <h3 class="product-model">V15 35.56cms-Black</h3>
+                <div class="Laptop" id="item-5">
+                    <ul class="actions">
+                        <li>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"
+                                onclick="addtocart(this.parentElement.parentElement.parentElement)"></i>
+                        </li>
+                    </ul>
+                    <div class="Laptop-image">
+                        <img src="images/laptop5.png" alt="">
+                    </div>
+                    <div class="Laptop-details">
+                        <h3 class="Laptop-model">ASUS VivoBook 14(2020)</h3>
+                        <div class="price">
+                            <i class="fa fa-inr"></i>35,999
+                        </div>
                         <ul>
-                            <li class="product-features">35.56cms(15.6inches) anti-glare display</li>
-                            <li class="product-features">256 GB SSD</li>
-                            <li class="product-features">11th Generation Intel® Core™ i5-1115G4 Processor (2 Cores / 4 Threads,
-                                3.00 GHz, up to 4.10 GHz with Turbo Boost, 6 MB Cache)</li>
+                            <li class="Laptop-features">14-inch LED-Backlit LCD, FHD , Anti-Glare Plane
+                                with 45% NTSC</li>
+                            <li class="Laptop-features">1TB HDD 2.5-inch SATA 5400RPM with empty M.2 2280 Slot</li>
+                            <li class="Laptop-features">10th Gen Intel Core i3-1005G1</li>
                         </ul>
                     </div>
                 </div>
-                <div class="product" id="item-6">
-                    <div class="product-image">
-                        <img src="images/laptop1.png" alt="">
+                <div class="Laptop" id="item-6">
+                    <ul class="actions">
+                        <li>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"
+                                onclick="addtocart(this.parentElement.parentElement.parentElement)"></i>
+                        </li>
+                    </ul>
+                    <div class="Laptop-image">
+                        <img src="images/laptop6.png" alt="">
                     </div>
-                    <div class="product-details" >
-                        <h3 class="product-model">V15 35.56cms-Grey</h3>
+                    <div class="Laptop-details">
+                        <h3 class="Laptop-model">V15 35.56cms-Grey</h3>
+                        <div class="price">
+                            <i class="fa fa-inr"></i>43,599
+                        </div>
                         <ul>
-                            <li class="product-features">35.56cms(15.6inches) anti-glare display</li>
-                            <li class="product-features">256 GB SSD</li>
-                            <li class="product-features">11th Generation Intel® Core™ i5-1115G4 Processor (2 Cores / 4 Threads,
-                                3.00 GHz, up to 4.10 GHz with Turbo Boost, 6 MB Cache)</li>
+                            <li class="Laptop-features">35.56 cm LED-Backlit LCD, FHD, NanoEdge bezel, Anti-Glare Plane
+                                with 45% NTSC</li>
+                            <li class="Laptop-features">512 GB SSD</li>
+                            <li class="Laptop-features"> 10th Gen Intel Core i5-1035G1, 1.0 GHz Base Speed, Up to 3.6
+                                GHz Turbo boost Speed, 4 cores, 8 Threads, 6MB Cache)</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
     <script src="js/index.js"></script>
 </body>

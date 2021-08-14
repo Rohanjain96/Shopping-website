@@ -3,7 +3,7 @@ console.log("javascript added");
 const sidebars = document.getElementById("side-bars");
 const leftbutton = document.getElementById("left-slider-btn");
 const rightbutton = document.getElementById("right-slider-btn");
-const items =document.getElementById("slider-items").children.length;
+const items = document.getElementById("slider-items").children.length;
 const slider = document.getElementById("slider");
 let responsiveslider = [
     { left: 1, right: 4 },
@@ -117,7 +117,7 @@ function leftclicked() {
             }
         }
     }
-    else if (window.outerWidth >= 601 && window.outerWidth <= 900) {
+    else if (window.outerWidth >= 681 && window.outerWidth <= 900) {
 
         if (responsiveslider[2].left >= 1 && responsiveslider[2].right >= 2) {
             responsiveslider[2].left -= 1;
@@ -138,5 +138,9 @@ function leftclicked() {
             }
         }
     }
-    }
+}
 
+function addtocart(e) {
+    console.log(e);
+    console.log(e.children[2].children[0]);
+}
