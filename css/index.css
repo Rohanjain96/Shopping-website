@@ -495,22 +495,21 @@ body
     {
         display: flex;
         align-items: flex-start;
-       
-    }
-    .product-slider .slider-items
-    {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        margin-top: 50px;
-    }
-    .product-slider .slider-items .Laptop
-    {
-        min-width: 340px;
-        margin: 5px 5px;
     }
     #right-slider-btn,#left-slider-btn
     {
         display: none;
+    }
+    .product-slider .slider-items
+    {
+        overflow-x: auto;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .product-slider .slider-items .product
+    {
+        min-width: 340px;
+        margin: 5px ;
     }
 }
 
