@@ -54,7 +54,7 @@ function rightclicked() {
             }
         }
     }
-    else if (window.outerWidth >= 601 && window.outerWidth <= 900) {
+    else if (window.outerWidth >= 768 && window.outerWidth <= 900) {
         if (responsiveslider[2].left <= 5 && responsiveslider[2].right <= items) {
             responsiveslider[2].left += 1;
             responsiveslider[2].right += 1;
@@ -117,7 +117,7 @@ function leftclicked() {
             }
         }
     }
-    else if (window.outerWidth >= 681 && window.outerWidth <= 900) {
+    else if (window.outerWidth >= 768 && window.outerWidth <= 900) {
 
         if (responsiveslider[2].left >= 1 && responsiveslider[2].right >= 2) {
             responsiveslider[2].left -= 1;
