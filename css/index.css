@@ -98,10 +98,10 @@ body
 {
     position: absolute;
     content: attr(data-count);
-    top: 5px;
-    right:20px;
-    width: 2px;
-    height: 2px;
+    top: 3px;
+    right:19px;
+    width: 4px;
+    height: 4px;
     background-color: white;
     padding: 4px;
     border-radius: 50px;
@@ -109,9 +109,9 @@ body
 .header .Addtocart .counter
 {
     position: absolute;
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     top: -15px;
-    right:23px;
+    right:22px;
 }
 .header .bars
 {
@@ -140,12 +140,26 @@ body
     color: white;
     margin: 0 10px;
 }
-.navigation nav ul li{
-    margin: 0 20px;
+.navigation .bars a{
+    padding: 5px;
+}
+.navigation .bars a:hover
+{
+    border:2px solid white;
 }
 
+
 .navigation nav ul li a{
+    padding: 5px;
     color: white;
+    margin: 0 5px;
+    width:10px;
+    /* transition: all 0.1s ease-in; */
+    box-sizing: border-box;
+}
+.navigation nav ul li a:hover{
+    border:2px solid white;
+
 }
 /* Creating hamburger menu  */
 .side-bars
@@ -156,7 +170,6 @@ body
     height: 100%;
     min-width: 250px;
     background-color:ghostwhite;
-    overflow-y: scroll;
     transition: 0.5s ease;
     z-index: 8;
 }
@@ -222,6 +235,7 @@ body
     height:430px;
     overflow: hidden;
     align-items: center;
+    justify-content: center;
     background-color: rgb(30, 145, 133);
     border-top: 2px solid rgba(0, 0, 0, 0.159);
     border-bottom: 2px solid rgba(0, 0, 0, 0.083);
@@ -245,7 +259,7 @@ body
 }
 .product-slider .slider-items
 {
-    width: 100%;
+    width: 95%;
     height: 380px;
     display: flex;
     flex-wrap: wrap;
@@ -255,7 +269,7 @@ body
  .product-slider .slider-items .Laptop
  {
      position: relative;
-    max-width: 320px;
+    max-width: 300px;
     height: 360px;
     margin: 10px ;
     font-size: 0.9rem;
@@ -284,9 +298,10 @@ body
     margin: 5px;
     color: white;
     background-color: rgb(232, 66, 99);
-    transform: translateX(40px);
+    transform: translateX(45px);
     transition: transform 0.1s;
     cursor: pointer;
+    z-index: 2;
 }
 .product-slider .Laptop:hover .actions li
 {
@@ -352,12 +367,12 @@ body
 {
      position: absolute;
      display: flex;
-     width:60px;
-     height:60px;
+     width:40px;
+     height:40px;
      background-color: rgb(241, 248, 248);
      justify-content: center;
      align-items: center;
-     top:35%;
+     top:45%;
      font-size: 1.4rem;
      font-weight: bold;
      color: rgb(238, 49, 80);
@@ -371,6 +386,7 @@ body
         box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.7) ;
         visibility: hidden;
         opacity:0.4;
+        left: 0;
  }
 #right-slider-btn
  {
@@ -410,6 +426,15 @@ li i.fa-shopping-cart{
     color: white;
 }
 
+@media screen and (max-width:1350px)
+{
+
+        .product-slider .slider-items .Laptop
+    {
+        min-width: 380px;
+        margin: 8px ;
+    }
+}
 @media screen and (max-width:1260px)
 {
     .header .Addtocart::before
@@ -423,19 +448,16 @@ li i.fa-shopping-cart{
     }
 }
 
-@media screen and (max-width:950px)
+@media screen and (max-width:1010px)
 {
-    .header .Addtocart::before
-    {
-        right: 9px;
-    } 
 
-    .header .Addtocart .counter
+        .product-slider .slider-items .Laptop
     {
-        right:11px;
+        min-width: 390px;
+        margin: 8px ;
     }
 }
-@media screen and (max-width:800px)
+@media screen and (max-width:840px)
 {
     .header .Addtocart::before
     {
@@ -445,6 +467,11 @@ li i.fa-shopping-cart{
     .header .Addtocart .counter
     {
         right:9px;
+    }
+        .product-slider .slider-items .Laptop
+    {
+        min-width: 335px;
+        margin: 8px ;
     }
 }
 @media screen and (max-width:768px) 
@@ -493,7 +520,12 @@ li i.fa-shopping-cart{
     {
         display: none;
     }
-    
+    .product-slider .slider-items
+    {
+        overflow-x: auto;
+        flex-direction: column;
+        margin-top: 50px;
+    }
     
 }
 @media screen and (max-width:700px) {
@@ -562,7 +594,7 @@ li i.fa-shopping-cart{
     }
 }
 
-@media screen and (max-width:470px) {
+@media screen and (max-width:500px) {
     
     .header{
         position: relative;
@@ -602,12 +634,12 @@ li i.fa-shopping-cart{
     }
     .header .Addtocart::before
     {
-        right: 14px;
+        right: 16px;
     } 
 
     .header .Addtocart .counter
     {
-        right:17px;
+        right:19px;
     }
     .product-slider .slider-items .Laptop
     {
