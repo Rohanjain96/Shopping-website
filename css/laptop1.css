@@ -1,0 +1,506 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@0,400;1,300;1,900&display=swap');
+
+/* Reseting all elements */
+*
+{
+    margin:0px;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: gainsboro;
+}
+/* Creating header bar */
+.header
+{
+    display: flex;
+    max-width: 100%;
+    line-height: 50px;
+    background-image: linear-gradient( 45deg, rgb(12, 127, 181),rgba(232, 70, 97, 0.775));
+    justify-content: space-around;
+}
+.header label
+{
+ 
+    color:white;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.header .search-box
+{
+    display:flex;
+    min-width: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .search-box input
+{
+    height: 30px;
+    width:100%;
+    outline: none;
+    margin-right:6px;
+    border:none;
+    border-radius: 5px;
+    padding-left: 20px;
+    color: gray;
+}
+
+.header .search-box .search-icon
+{
+    font-size: 1rem;
+    color:white;
+}
+.header .search-box .search-icon :hover
+{
+    color: yellow;
+}
+.header .signin i
+{
+    font-size: 1rem;
+    color:white;
+}
+.header .signin i:hover
+{
+    color: yellow;
+}
+.header .Whishlist i
+{
+    font-size: 1rem;
+    color:white;
+    cursor: pointer;
+}
+.header .Whishlist i:hover
+{
+    color: yellow;
+}
+.header .Addtocart i
+{
+    position: relative;
+    font-size: 1rem;
+    color:white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.header .Addtocart i:hover
+{
+    color: yellow;
+}
+.header .Addtocart::before
+{
+    position: absolute;
+    content: attr(data-count);
+    top: 4px;
+    right:20px;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    padding: 4px;
+    border-radius: 50px;
+}
+.header .Addtocart .counter
+{
+    position: absolute;
+    font-size: 0.5rem;
+    top: -15px;
+    right:22px;
+}
+.header .bars
+{
+    display: none;
+    color:white;
+}
+
+.header .bars:hover
+{
+    color:yellow;
+}
+/* Creating navigation menu */
+.navigation
+{
+    display: flex;
+    max-width:100%;
+    line-height: 40px;
+    background-color: rgba(0, 87, 128, 0.775);
+}
+
+.navigation ul{
+    display: flex;
+    list-style: none;
+}
+.navigation .bars{
+    color: white;
+    margin: 0 10px;
+}
+.navigation .bars a{
+    padding: 5px;
+}
+.navigation .bars a:hover
+{
+    border:2px solid white;
+}
+
+
+.navigation nav ul li a{
+    padding: 5px;
+    color: white;
+    margin: 0 5px;
+    /* transition: all 0.1s ease-in; */
+    box-sizing: content-box;
+}
+.navigation nav ul li a:hover{
+    border:2px solid white;
+
+}
+/* Creating hamburger menu  */
+.side-bars
+{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    min-width: 250px;
+    background-color:ghostwhite;
+    transition: 0.5s ease;
+    z-index: 8;
+}
+.side-bars .side-bars-container
+{
+    position: absolute;
+    width: 100;
+    top:30px;
+    left:0;
+}
+.side-bars .side-bars-container ul
+{
+    list-style: none;
+}
+.side-bars .side-bars-container ul li
+{
+    margin-top: 10px;
+
+}
+.side-bars ul ul li a
+{
+    color: rgba(0, 0, 0, 0.6);
+}
+.side-bars .side-bars-container .sidemenu-heading
+{
+    font-size: 1.1rem;
+    color: black;
+    margin: 30px;
+}
+
+.side-bars .side-bars-container .sidemenu-items
+{
+    color: rgba(0, 0, 0, 0.6);
+    margin: 30px;
+}
+.side-bars .sidemenudrop-items
+{
+    margin: 60px 40px;
+}
+.side-bars ul ul 
+{
+    display: none;
+}
+.side-bars ul li:hover > ul
+{
+    display: block;
+}
+.side-bars .closebtn
+{
+    position: absolute;
+    right: 0;
+    top:0;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+/* desiging product page */
+.product{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 10px 0px ; 
+}
+.product-showing-area
+{ 
+    border:2px solid black;
+    width: 40%;
+    height: 100%;
+}
+/* designing product photos */
+.product-showing-area .pictures
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    flex-direction: row;
+    margin: 10px;
+}
+.product-showing-area .pictures .preview
+{
+    position: absolute;
+    right:10px;
+    width:70%;
+    height: 100%;
+}
+.product-showing-area .pictures .preview img
+{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: white;
+}
+.product-showing-area .picture-slider
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width:25%;
+    height: 100%;
+}
+.product-showing-area .picture-slider .otherimage
+{
+    margin: 5px;
+    border: 2px solid white;
+    background-color: white;
+}
+.picture-slider img
+{
+    height:133px;
+    width: 100%;
+}
+.product-details
+{
+    text-align: center;
+}
+.product-price
+{
+    width:180px;
+    height:70px;
+    text-align: left;
+
+}
+@media screen and (max-width:1260px)
+{
+    .header .Addtocart::before
+    {
+        right: 13px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:16px;
+    }
+}
+
+.product-details
+{
+    width: 40%;
+}
+@media screen and (max-width:950px)
+{
+    .header .Addtocart::before
+    {
+        right: 9px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:11px;
+    }
+}
+@media screen and (max-width:800px)
+{
+    .header .Addtocart::before
+    {
+        right: 7px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:9px;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .header .search-box
+    {
+        min-width: 60%;
+        
+    }
+    .header .bars
+    {
+        display: block;
+    }
+    .header .Addtocart::before
+    {
+        right: 11px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:13px;
+    }
+    .navigation 
+    {
+        display: none;
+    }
+    
+    
+}
+@media screen and (max-width:700px) {
+    .header label
+    {
+        margin-left: 10px;
+        font-size: 1.2rem;
+    }
+    .header .search-box
+    {
+        min-width: 50%;
+    }
+    
+    .header .bars
+    {
+        display: block;
+    }
+    .header .Addtocart ::before
+    {
+        right: 0px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:13px;
+    }
+    .navigation
+    {
+        display: none;
+    }
+    .navigation .bars
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .header .Addtocart::before
+    {
+        right: 8px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:10px;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    
+    .header{
+        position: relative;
+        height: 90px;
+        justify-content: space-around;
+        font-size: 1.2rem;
+    }
+    .header label
+    {
+        margin-left: 2px;
+        font-size: 1.2rem;
+    }
+    .header .search-box
+    {
+        position: absolute;
+        width:94%;
+        height: 20px;
+        top:50px;
+        margin: 15px 10px;
+        
+    }
+    .header .search-box input
+    {
+        margin-bottom: 20px;
+    }
+    .header .search-box .search-icon
+    {
+        margin-bottom: 20px;
+    }
+    .header .bars
+    {
+        display: block;
+    }
+        .navigation .bars
+    {
+        display: none;
+    }
+    .header .Addtocart::before
+    {
+        right: 16px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:19px;
+    }
+}
+@media screen and (max-width:315px) {
+    
+    .header{
+        position: relative;
+        height: 90px;
+        /* justify-content: space-around; */
+        font-size: 1.4rem;
+    }
+    .header label
+    {
+        margin-left: 4px;
+        font-size: 1.2rem;
+    }
+    .header .search-box
+    {
+        position: absolute;
+        width:94%;
+        height: 20px;
+        top:50px;
+        margin: 15px 10px;
+        
+    }
+    .header .search-box input
+    {
+        margin-bottom: 20px;
+    }
+    .header .search-box .search-icon
+    {
+        margin-bottom: 20px;
+    }
+    .header .bars
+    {
+        display: block;
+    }
+        .navigation .bars
+    {
+        display: none;
+    }
+    .header .Addtocart::before
+    {
+        right: 8px;
+    } 
+
+    .header .Addtocart .counter
+    {
+        right:11px;
+    }
+}
