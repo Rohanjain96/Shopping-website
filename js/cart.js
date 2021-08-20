@@ -19,15 +19,15 @@ else {
         <span>x${element.qty}</span>
         </div>
         <div class="item-name">${element.producttitle}</div>
-        <div class="inc-count-btn" onclick="changequantity(this.parentElement,1)">
+        <div class="inc-count-btn" style="color: black;" onclick="changequantity(this.parentElement,1)">
         +
         </div>
         <div class="quantity">${element.qty} </div>
-        <div class="desc-count-btn" onclick="changequantity(this.parentElement,-1)">
+        <div class="desc-count-btn" style="color: black;" onclick="changequantity(this.parentElement,-1)">
         -
         </div>
         <div class="price"><i class="fa fa-inr">${element.productprice}</i></div>
-        <div class="rem-btn" onclick="removefromcart(this.parentElement)">
+        <div class="rem-btn" style="color: black;" onclick="removefromcart(this.parentElement)">
         Remove
         </div>
         </div>
