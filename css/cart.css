@@ -247,9 +247,73 @@ right: 0%;
 @media screen and (max-width:768px){
     .item-container
     {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
     .item-name{
-    width: 100%;
+        width: 76%;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    body{
+        zoom: 48%;
+    }
+    #back{
+        width: 197vw;
+        padding: 11px;
+    }
+    nav#cart{
+        left: -43.1%;
+        top: 6px;
+    }
+    nav#cart ul li a{
+        font-size: 1.4rem;
+        padding: 16px 28px;
+    }
+    h1{
+        font-size: 3.5rem;
+    }
+    .img-container {
+        height: 105px;
+        width: 310px;
+    }
+    .img-container span{
+        bottom: -2px;
+    }
+    .inc-count-btn, .desc-count-btn{
+        width: 68px;
+    }
+    .inc-count-btn{
+        margin-left: 4px;
+    }
+    .desc-count-btn{
+        margin-right: 15px;
+    }
+    .quantity{
+        width: 128px;
+        font-weight: 500;
+    }
+    .price{
+        font-size: 1.9rem;
+        margin-right: 10px;
+    }
+    .rem-btn{
+        font-size: 1.5rem;
+        background-color: white;
+        padding: 6px 7px;
+        margin-right: 22px;
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    .img-container {
+        height: 110px;
+        width: 310px;
+    }
+}
+@media screen and (max-width: 360px) {
+    body{
+        zoom: 45%;
     }
 }
