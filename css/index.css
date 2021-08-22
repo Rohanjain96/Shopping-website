@@ -828,7 +828,7 @@ li i.fa-shopping-cart{
     
     .home
     {
-        min-width: 340px;
+        width:100%;
         font-size: 0.8rem;
     }
 }
