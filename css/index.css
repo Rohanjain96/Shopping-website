@@ -255,11 +255,9 @@ body
 .home
 {
     display: flex;
-    min-width:300px;
-    max-width: 318px;
+    width: 318px;
     height: auto;
     margin:10px auto;
-    border: 1px solid black;
     justify-content: space-evenly;
     flex-wrap: wrap;
     background-color: white;
@@ -498,7 +496,7 @@ li i.fa-shopping-cart{
 
         .product-slider .slider-items .Laptop
     {
-        min-width: 380px;
+        width: 380px;
         margin: 8px ;
     }
 }
@@ -516,8 +514,7 @@ li i.fa-shopping-cart{
     
     .home
     {
-        min-width: 290px;
-        max-width: 290px;
+        width: 290px;
     }
     
 }
@@ -526,16 +523,14 @@ li i.fa-shopping-cart{
 {
     .home
     {
-        min-width: 260px;
-        max-width: 260px;
+       width: 260px;
     }
 }
 @media screen and (max-width:1090px)
 {
     .home
     {
-        min-width: 230px;
-        max-width: 240px;
+        width: 240px;
     }
 }
 @media screen and (max-width:1010px)
@@ -551,16 +546,14 @@ li i.fa-shopping-cart{
 {
     .home
     {
-        min-width: 230px;
-        max-width: 230px;
+       width: 230px;
     }
 }
 @media screen and (max-width:920px)
 {
     .home
     {
-        min-width: 220px;
-        max-width: 220px;
+        width: 220px;
         font-size: 0.9rem;
     }
 }
@@ -568,8 +561,7 @@ li i.fa-shopping-cart{
 {
     .home
     {
-        min-width: 200px;
-        max-width: 205px;
+        width: 205px;
         font-size: 0.8rem;
     }
 }
@@ -594,8 +586,7 @@ li i.fa-shopping-cart{
 {
     .home
     {
-        min-width: 190px;
-        max-width: 190px;
+        width: 190px;
         font-size: 0.8rem;
     }
 }
@@ -624,8 +615,7 @@ li i.fa-shopping-cart{
     }
     .home
     {
-        min-width: 350px;
-        max-width: 350px;
+        width: 350px;
         font-size: 0.8rem;
     }
 }
@@ -665,8 +655,7 @@ li i.fa-shopping-cart{
 {
     .home
     {
-        min-width: 290px;
-        max-width: 320px;
+        width: 320px;
         font-size: 0.8rem;
     }
 }
@@ -740,8 +729,7 @@ li i.fa-shopping-cart{
 {
     .home
     {
-        min-width: 300px;
-        max-width: 300px;
+        width: 300px;
         font-size: 0.8rem;
     }
 }
@@ -750,8 +738,7 @@ li i.fa-shopping-cart{
 {
     .home
     {
-        min-width: 270px;
-        max-width: 270px;
+        width: 270px;
         font-size: 0.8rem;
     }
 }
@@ -759,8 +746,7 @@ li i.fa-shopping-cart{
 {
     .home
     {
-        min-width: 250px;
-        max-width: 250px;
+        width: 250px;
         font-size: 0.8rem;
     }
 }
@@ -819,8 +805,7 @@ li i.fa-shopping-cart{
     }
     .home
     {
-        min-width: 230px;
-        max-width: 230px;
+        width: 100%;
         font-size: 0.8rem;
     }
 }
@@ -828,7 +813,7 @@ li i.fa-shopping-cart{
     
     .home
     {
-        width:100%;
+        width: 100%;
         font-size: 0.8rem;
     }
 }
@@ -889,10 +874,5 @@ li i.fa-shopping-cart{
         min-width: 240px;
         margin: 10px 0px;
         margin-left: 5px;
-    }
-    .home
-    {
-       Width:100%;
-        font-size: 0.8rem;
     }
 }
