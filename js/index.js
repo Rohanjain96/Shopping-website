@@ -55,7 +55,7 @@ function rightclicked() {
             }
         }
     }
-    else if (window.outerWidth >= 1255 && window.outerWidth <= 1360) {
+    else if (window.outerWidth >= 1251 && window.outerWidth <= 1360) {
         if (responsiveslider[1].left <= 4 && responsiveslider[1].right <= items) {
             responsiveslider[1].left += 1;
             responsiveslider[1].right += 1;
@@ -72,7 +72,7 @@ function rightclicked() {
             }
         }
     }
-    else if (window.outerWidth >= 768 && window.outerWidth <= 1254) {
+    else if (window.outerWidth >= 768 && window.outerWidth <= 1250) {
         if (responsiveslider[2].left <= 5 && responsiveslider[2].right <= items) {
             responsiveslider[2].left += 1;
             responsiveslider[2].right += 1;
@@ -114,7 +114,7 @@ function leftclicked() {
             }
         }
     }
-    else if (window.outerWidth >= 1255 && window.outerWidth <= 1360) {
+    else if (window.outerWidth >= 1251 && window.outerWidth <= 1360) {
 
         if (responsiveslider[1].left >= 1 && responsiveslider[1].right >= 3) {
             responsiveslider[1].left -= 1;
@@ -135,7 +135,7 @@ function leftclicked() {
             }
         }
     }
-    else if (window.outerWidth >= 768 && window.outerWidth <= 1254) {
+    else if (window.outerWidth >= 768 && window.outerWidth <= 1250) {
 
         if (responsiveslider[2].left >= 1 && responsiveslider[2].right >= 2) {
             responsiveslider[2].left -= 1;

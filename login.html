@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,41 +23,41 @@
         </div>
         <div class="formbox ">
             <div class="form signinform">
-                <form > 
+                <form>
                     <h3>Signin</h3>
-                   <div class="inputbox">
-                       <input type="email" name="Email" id="Email" required>
-                       <label for=" Email ">Email</label>
+                    <div class="inputbox">
+                        <input type="email" name="Email" id="Email" required>
+                        <label for=" Email ">Email</label>
                     </div>
                     <div class="inputbox">
-                    <input type="password" name="Password" id="Password" required>
-                    <label for="Password ">Password</label>
+                        <input type="password" name="Password" id="Password" required>
+                        <label for="Password ">Password</label>
                     </div>
-                    <button>Submit</button>  
-                    <a href="#">Forgot Password</a>                 
+                    <button>Submit</button>
+                    <a href="#">Forgot Password</a>
                 </form>
             </div>
             <div class="form signupform">
-                <form > 
+                <form>
                     <h3>Signup</h3>
-                   <div class="inputbox">
-                       <input type="text" name="Name" id="Name" required>
-                       <label for="Name">Name</label>
-                    </div>
-                   <div class="inputbox">
-                       <input type="email" name="Email" id="Email" required>
-                       <label for=" Email ">Email</label>
+                    <div class="inputbox">
+                        <input type="text" name="Name" id="Name" required>
+                        <label for="Name">Name</label>
                     </div>
                     <div class="inputbox">
-                    <input type="password" name="Password" id="Password" required>
-                    <label for="Password ">Password</label>
+                        <input type="email" name="Email" id="Email" required>
+                        <label for=" Email ">Email</label>
                     </div>
                     <div class="inputbox">
-                    <input type="password" name="Password" id="Password" required>
-                    <label for="Password ">Confirm Password</label>
+                        <input type="password" name="Password" id="Password" required>
+                        <label for="Password ">Password</label>
                     </div>
-                    <button>Submit</button>  
-                    <a href="#">Forgot Password?</a>                    
+                    <div class="inputbox">
+                        <input type="password" name="Password" id="Password" required>
+                        <label for="Password ">Confirm Password</label>
+                    </div>
+                    <button>Submit</button>
+                    <a href="#">Forgot Password?</a>
                 </form>
             </div>
         </div>
@@ -67,16 +66,14 @@
 <script>
     const signin = document.querySelector('.signinbtn');
     const signup = document.querySelector('.signupbtn');
-    const formbox= document.querySelector('.formbox');
-    const body= document.querySelector('body')
-    signup.onclick =function()
-    {
+    const formbox = document.querySelector('.formbox');
+    const body = document.querySelector('body')
+    signup.onclick = function () {
         formbox.classList.add('active');
-        body.style.backgroundColor='red';
+        body.style.backgroundColor = 'red';
     }
-    signin.onclick =function()
-    {
+    signin.onclick = function () {
         formbox.classList.remove('active');
-        body.style.backgroundColor=' rgb(40, 64, 247)';
+        body.style.backgroundColor = ' #48dbfb';
     }
 </script>
