@@ -647,7 +647,8 @@ body
     }
     .technical-details 
     {
-        max-width: 300px;
+        min-width: 300px;
+        max-width: 450px;
         margin-left:auto;
         margin-right:auto;
     }
