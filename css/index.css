@@ -26,7 +26,7 @@ body
     top:0%;
     max-width: 100%;
     line-height: 50px;
-    background-image: linear-gradient( 45deg,#82ccdd,rgba(232, 70, 97, 0.775));
+    background-image: linear-gradient( 45deg,#82ccdd,rgb(232, 70, 97));
     justify-content: space-around;
 }
 .header label
@@ -193,6 +193,7 @@ body
 {
     margin-top: 10px;
     padding: 5px;
+    transition: all 0.2s linear;
 
 }
 .side-bars ul ul li a
@@ -222,8 +223,10 @@ body
 }
 .side-bars ul ul 
 {
+    transition: all 5s;
     display: none;
 }
+
 .side-bars ul li:hover > ul
 {
     background-color: ghostwhite;
@@ -407,6 +410,7 @@ body
     box-sizing: border-box;
     color: white;
     z-index: 3;
+    position:realtive
 }
 .Laptop-details h3
 {
@@ -422,11 +426,25 @@ body
     border-top: 2px solid rgba(255, 255, 0, 0.5);
     border-bottom: 2px solid rgba(255, 255, 0, 0.5);
 }
+.Laptop-details a
+{
+    transition: all 0.2s;
+    position: absolute;
+    bottom: -2px;
+    right: 2px;
+    color: white;
+    font-size: 1rem;
+    opacity:0;
+}
 .product-slider .Laptop:hover .Laptop-image
 {
     height:210px;
     object-fit: cover;
     transition: all 0.5s ease-in-out;
+}
+.product-slider .Laptop:hover .Laptop-details a
+{
+    opacity: 1;
 }
 #right-slider-btn,#left-slider-btn
 {

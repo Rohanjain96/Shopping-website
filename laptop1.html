@@ -44,7 +44,7 @@
             </div>
             <div class="Addtocart">
                 <span class="counter" onload="settingcounter()"></span>
-                <a>
+                <a href="cart.html">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </a>
             </div>
@@ -137,40 +137,415 @@
                 </ul>
             </div>
         </div>
-        <div class="product">
+        <div class="product" id="item-1">
             <div class="product-showing-area">
                 <div class="pictures">
                     <div class="preview">
                         <img src="images/laptop1.png" alt="">
                     </div>
                     <div class="picture-slider">
-                        <div class="otherimage">
-                            <img src="images/laptop1_2.png" alt="">
+                        <div class="otherimage" >  
+                            <img src="images/laptop1.png" onclick="changemainimage(this)" alt="">
                         </div>
-                        <div class="otherimage">
-                            <img src="images/laptop1_3.png" alt="">
+                        <div class="otherimage" >  
+                            <img src="images/laptop1_2.png" onclick="changemainimage(this)" alt="">
                         </div>
-                        <div class="otherimage">
-                            <img src="images/laptop1_4.png" alt="">
+                        <div class="otherimage" >
+                            <img src="images/laptop1_3.png" onclick="changemainimage(this)" alt="">
+                        </div>
+                        <div class="otherimage" >
+                            <img src="images/laptop1_4.png" onclick="changemainimage(this)" alt="">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="product-details">
                 <div class="product-title">
-                    Lenovo V14 AMD RYZEN 3 3250U Laptop (4GB/1TB/Dos/14" HD / Iron Grey/ 3 Year Warranty/ 1.85Kg)
-                    82C6000LIH
+                    Lenovo V14 AMD RYZEN 3 3250U Laptop
                 </div>
+                <div class="product-rating">
+                    <div class="rating-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <span> 10 Ratings</span>
+
+                </div>
+                <hr>
                 <div class="product-price">
-                    M.R.P.: ₹46,200.00
-                    <br>
-                    Price: ₹30,599.00
-                    <br>
-                    You Save: ₹15,601.00 (34%)
-                    <br>
-                    Inclusive of all taxes
+                    <table>
+                        <tr>
+                            <td class="topic">
+                                M.R.P.:
+                            </td>
+                            <td>
+                                <i class="fa fa-inr"></i>  46,200
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="topic">
+                                Price:
+                            </td>
+                            <td class="Price"> 
+                                <i class="fa fa-inr"></i> 30,599
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="topic">
+                                You Save:
+                            </td>
+                            <td>
+                                <i class="fa fa-inr"></i> 15,601 (34%)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+                                Inclusive of all taxes
+                            </td>
+                        </tr>
+                    </table>
                 </div>
+                <span class="deliver-date"> <span class="free-delivery">FREE delivery: </span> Friday, Aug 27</span>
+                <button class="mobilebuynowbtn">Buy Now</button>
+                <div class="product-info">
+                    <table>
+                        <tr>
+                            <td class="topic">
+                                Series
+                            </td>
+                            <td>
+                                V14 ADA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="topic">
+                                Brand
+                            </td>
+                            <td>
+                                Lenovo
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="topic">
+                                Specific Uses For Product
+                            </td>
+                            <td>
+                                Business
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="topic">
+                                Screen Size
+                            </td>
+                            <td>
+                                14 Inches
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="topic">
+                                Operating System
+                            </td>
+                            <td>
+                                DOS
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>
+                    About this item
+                </h3>
+                <ul>
+                    <li>
+                        Processor: AMD Ryzen 3 3250U processor, 2.6 Ghz base speed, 3.5 Ghz max speed, 2 cores, 4 Mb L3
+                        Cache
+                    </li>
+                    <li>
+                        Operating System: Dos | Display: 14" HD (1366x768) TN 220nits Anti-glare
+                    </li>
+                    <li>
+                        Memory and Storage: 4 GB RAM | Storage 1 TB HDD
+                    </li>
+                    <li>
+                        Design and battery: Thin and light Laptop| 180 Degree Hinge| Laptop weight 1.60 kg | Battery
+                        Life: Upto 5.5 hours as per MobileMark
+                    </li>
+                    <li>
+                        Inside the box: Laptop, Charger, User Manual | Ports and Optical Drive: 1 HDMI, 2 USB 3.0,
+                        USB2.0 |4-in-1 card reader (SD,SDHC,SDXC,MMC)|Combo audio and microphone jack | No Optical Drive
+                    </li>
+                </ul>
             </div>
+            <div class="buyingsection">
+                <div class="selectquantity">
+                    <span> Quantity:</span>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <button class="Addtocartbtn" onclick="addtocart(this.parentElement.parentElement)">Add to Cart</button>
+                <button class="buynowbtn">Buy Now</button>
+            </div>
+        </div>
+        <div class="technical-details">
+            <h3> Technical-Details</h3>
+            <table>
+                <tr>
+                    <td>
+                        Brand
+                    </td>
+                    <td>
+                        Lenovo
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Manufacturer
+                    </td>
+                    <td>
+                        ‎LENOVO COMPUTERS, Lenovo, Compal information technology (kunshan) CO., LTD., Address: No. 58,
+                        the 1st street, Kunshan Export Processing Zone, Jiangsu, P.R.O.C. CHINA
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Series
+                    </td>
+                    <td>
+                        ‎V14 ADA
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Colour
+                    </td>
+                    <td>
+                        ‎Iron Grey
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Item Height ‎
+                    </td>
+                    <td>
+                        20 Millimeters
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Item Width
+                    </td>
+                    <td>
+                        ‎24.1 Centimeters
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Standing screen display size
+                    </td>
+                    <td>
+                        ‎14 Inches
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Resolution
+                    </td>
+                    <td>
+                        ‎HD (1366 X 768)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Product Dimensions
+                    </td>
+                    <td>
+                        ‎32.7 x 24.1 x 2 cm; 1.6 Kilograms
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Item model number
+                    </td>
+                    <td>
+                        ‎Lenovo V14 ADA 82C6000KIH
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Processor Brand
+                    </td>
+                    <td>
+                        ‎Intel
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Processor Type ‎
+                    </td>
+                    <td>
+                        Atom Z8700
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Processor Speed ‎
+                    </td>
+                    <td>
+                        2.6 GHz
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Processor Count
+                    </td>
+                    <td>
+                        ‎2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        RAM Size
+                    </td>
+                    <td>
+                        ‎4 GB
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Memory Technology
+                    </td>
+                    <td>
+                        ‎DDR4
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        Maximum Memory Supported
+                    </td>
+                    <td>
+                        ‎16 GB
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hard Drive Size ‎
+                    </td>
+                    <td>
+                        1 TB
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hard Drive Interface
+                    </td>
+                    <td>
+                        ‎ESATA
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hard Disk Rotational Speed
+                    </td>
+                    <td>
+                        ‎5400
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Number of USB 3.0 Ports
+                    </td>
+                    <td>
+                        ‎2
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Number of HDMI Ports
+                    </td>
+                    <td>
+                        ‎1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Number of Audio-out Ports
+                    </td>
+                    <td>
+                        ‎1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Optical Drive Type
+                    </td>
+                    <td>
+                        ‎No Optical Drive
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Operating System
+                    </td>
+                    <td>
+                        ‎DOS
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Average Battery Life (in hours)
+                    </td>
+                    <td>
+                        ‎5.5 Hours
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Lithium Battery Energy Content
+                    </td>
+                    <td>
+                        42 Watt Hours
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Included Components
+                    </td>
+                    <td>
+                        ‎Laptop, adaptor, user manual
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Manufacturer
+                    </td>
+                    <td>
+                        ‎LENOVO COMPUTERS
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Item Weight
+                    </td>
+                    <td>
+                        ‎1 kg 600
+                    </td>
+                </tr>
+            </table>
         </div>
         <script src="js/laptop1.js"></script>
 </body>
