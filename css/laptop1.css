@@ -8,7 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
 
 }
 body
@@ -142,6 +142,7 @@ body
 }
 .navigation .bars a{
     padding: 5px;
+    border:2px solid transparent;
 }
 .navigation .bars a:hover
 {
@@ -153,6 +154,7 @@ body
     padding: 5px;
     color: white;
     margin: 0 5px;
+    border:2px solid transparent;
     /* transition: all 0.1s ease-in; */
     box-sizing: content-box;
 }
@@ -170,14 +172,18 @@ body
     min-width: 250px;
     background-color:ghostwhite;
     transition: 0.5s ease;
-    z-index: 8;
+    z-index: 100000;
 }
 .side-bars .side-bars-container
 {
     position: absolute;
-    width: 100;
+    width: 100%;
     top:30px;
     left:0;
+}
+.side-containers{
+    background-color: white;
+    margin-top: 5px;
 }
 .side-bars .side-bars-container ul
 {
@@ -186,6 +192,8 @@ body
 .side-bars .side-bars-container ul li
 {
     margin-top: 10px;
+    padding: 5px;
+    transition: all 0.2s linear;
 
 }
 .side-bars ul ul li a
@@ -194,9 +202,10 @@ body
 }
 .side-bars .side-bars-container .sidemenu-heading
 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: black;
     margin: 30px;
+    font-weight: bold;
 }
 
 .side-bars .side-bars-container .sidemenu-items
@@ -204,16 +213,24 @@ body
     color: rgba(0, 0, 0, 0.6);
     margin: 30px;
 }
+.side-bars .side-bars-container ul li:hover
+{
+    background-color: rgb(217, 217, 232);
+}
 .side-bars .sidemenudrop-items
 {
     margin: 60px 40px;
+    border-radius: 3px;
 }
 .side-bars ul ul 
 {
+    transition: all 5s;
     display: none;
 }
+
 .side-bars ul li:hover > ul
 {
+    background-color: ghostwhite;
     display: block;
 }
 .side-bars .closebtn
@@ -224,7 +241,6 @@ body
     margin: 10px;
     font-size: 1.2rem;
 }
-
 /* desiging product page */
 .product{
     display: flex;
@@ -301,6 +317,7 @@ body
 .product-title
 {
     font-size: 1.8rem;
+    font-weight: bold;
 }
 .product-rating
 {
@@ -311,10 +328,19 @@ body
 }
 .product-price
 {
-    width:240px;
+    width:250px;
     height:100px;
     margin-top: 5px;
+}
 
+.product-price table
+{
+    border-collapse: collapse;
+    margin-left: 5px;
+}
+.product-price table td:nth-child(odd)
+{
+     padding: 0px 2px;
 }
 .rating-stars
 { 
@@ -390,7 +416,7 @@ body
     position: absolute;
     bottom:45px;
     width:95%;
-    padding:8px;
+    padding:6px;
     border-radius: 20px;
     margin:5px auto;
     background: linear-gradient(to right,rgb(255, 111, 0),yellow);
@@ -406,15 +432,15 @@ body
     position: absolute;
     bottom:5px;
     width:95%;
-    padding:8px;
+    padding:6px;
     border-radius: 20px;
     margin:5px auto;
-    background: linear-gradient(to right,rgb(43, 255, 0),rgb(0, 255, 94));
+    background: linear-gradient(to right,rgb(43, 255, 0),rgb(0, 153, 255));
     font-weight: lighter;
 }
 .buynowbtn:hover
 {
-    background: linear-gradient(to right,rgb(0, 255, 94),rgb(43, 255, 0));
+    background: linear-gradient(to right,rgb(0, 153, 255),rgb(43, 255, 0));
 }
 .technical-details 
 {

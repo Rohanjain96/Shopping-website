@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/0a0b34b77d.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/laptop1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,58 +85,64 @@
                 <i class="fa fa-window-close" aria-hidden="true"></i>
             </div>
             <div class="side-bars-container">
-                <ul>
-                    <li>
-                        <a href="#" class="sidemenu-heading ">Trending</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sidemenu-items">Best Sellers</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sidemenu-items">New Releases</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sidemenu-heading">Shop By Departments</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sidemenu-items">Mobiles</a>
-                        <ul>
-                            <li>
-                                <a href="#" class="sidemenudrop-items">All mobiles phone</a>
-                            </li>
-                            <li>
-                                <a href="#" class="sidemenudrop-items">Cases And covers</a>
-                            </li>
-                            <li>
-                                <a href="#" class="sidemenudrop-items">Screen guard </a>
-                            </li>
-                            <li>
-                                <a href="#" class="sidemenudrop-items">Power Banks </a>
-                            </li>
-                            <li>
-                                <a href="#" class="sidemenudrop-items">Earphones </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="sidemenu-items">Laptops</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sidemenu-items">Speakers</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sidemenu-items">Computers</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sidemenu-items">Men Fashion</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sidemenu-items">Women fashion</a>
-                    </li>
-                    <li>
-                </ul>
+                <div class="side-containers">
+                    <ul>
+                        <li>
+                            <a href="#" class="sidemenu-heading ">Trending</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Best Sellers</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">New Releases</a>
+                        </li>  
+                    </ul>
+                </div>
+                <div class="side-containers">
+                    <ul>
+                            <a href="#" class="sidemenu-heading">Shop By Departments</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Mobiles</a>
+                            <ul>
+                                <li>
+                                    <a href="#" class="sidemenudrop-items">All mobiles phone</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidemenudrop-items">Cases And covers</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidemenudrop-items">Screen guard </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidemenudrop-items">Power Banks </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidemenudrop-items">Earphones </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Laptops</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Speakers</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Computers</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Men Fashion</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Women fashion</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+
+        <!-- Creating product details from here -->
         <div class="product" id="item-1">
             <div class="product-showing-area">
                 <div class="pictures">
@@ -179,7 +185,7 @@
                     <table>
                         <tr>
                             <td class="topic">
-                                M.R.P.:
+                                M.R.P :
                             </td>
                             <td>
                                 <i class="fa fa-inr"></i>  46,200
@@ -187,7 +193,7 @@
                         </tr>
                         <tr>
                             <td class="topic">
-                                Price:
+                                Price :
                             </td>
                             <td class="Price"> 
                                 <i class="fa fa-inr"></i> 30,599
@@ -195,7 +201,7 @@
                         </tr>
                         <tr>
                             <td class="topic">
-                                You Save:
+                                You Save :
                             </td>
                             <td>
                                 <i class="fa fa-inr"></i> 15,601 (34%)
@@ -298,7 +304,7 @@
                 <button class="buynowbtn">Buy Now</button>
             </div>
         </div>
-        <div class="technical-details">
+        <div class="technical-details"  data-aos="fade-up" data-aos-duration="500">
             <h3> Technical-Details</h3>
             <table>
                 <tr>
@@ -549,6 +555,10 @@
             </table>
         </div>
         <script src="js/laptop1.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
 </body>
 
 </html>
