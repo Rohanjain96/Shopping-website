@@ -1,0 +1,90 @@
+body a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.banner{
+    background: linear-gradient(to bottom, #ffb100 46%, #ffffff);
+    background-repeat: round;
+    /* display: flex; */
+    /* padding: 13px; */
+    /* padding-top: 76px; */
+    text-align: center;
+    padding-bottom: 16px;
+}
+.banner h3{
+    padding: 12px;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.banner-flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.banner-child .ban-txt{
+    text-align: center;
+}
+.banner-child{
+    background: white;
+    padding: 8px 13px;
+}
+
+.lap-cat{
+    display: flex;
+    flex-wrap: wrap;
+}
+.lap-cat-child img{
+    width: 573px;
+}
+
+
+.flex-parent{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0px 30px 0px;
+}
+.child{
+    border: 2px solid black;
+    padding: 18px;
+    background-color: #e1e1e1;
+}
+.price{
+    font-weight: 600;
+}
+.price sub{
+    font-size: 0.7rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .banner{
+        margin: 7px;
+    }
+    .banner h3{
+        font-size: 1.3rem;
+    }
+    .banner-flex{
+        flex-wrap: wrap;
+    }
+    .banner-child{
+        width: 47%;
+        margin-bottom: 6px;
+    }
+    .lap-cat-child img {
+        width: 100%;
+    }
+    .flex-parent{
+        flex-wrap: wrap;
+        /* width: 80%; */
+        margin: auto;
+    }
+    .child{
+        padding: 22px 0px;
+        margin-bottom: 11px;
+        width: 97%;
+    }
+}
