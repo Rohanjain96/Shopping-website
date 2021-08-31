@@ -159,7 +159,14 @@ function leftclicked() {
 }
 
 function addtocart(e) {
-    let flag = 0;
+    let addedtocart=document.querySelector(".addedtocart");
+    addedtocart.style.right = '0px';
+    addedtocart.style.display = 'block';
+    setTimeout(() => {
+        addedtocart.style.right = '-120px';
+        addedtocart.style.display = 'none'; 
+    },2000);
+    
     let detailproduct = {
         productcode: e.id,
         productprice: e.children[2].children[1].textContent,
@@ -172,7 +179,7 @@ function addtocart(e) {
     localStorage.setItem('counter', counter);
     document.getElementsByClassName("counter")[0].textContent = counter;
     productinaddtocart = localStorage.getItem("productinaddtocart");
-    if (productinaddtocart == null || productinaddtocart == "[]" ) {
+    if (productinaddtocart == null || productinaddtocart == "[]") {
         producttopush = [];
         producttopush.push(detailproduct);
         localStorage.setItem("productinaddtocart", JSON.stringify(producttopush));
@@ -197,14 +204,15 @@ function addtocart(e) {
             return;
         }
     });
+
     function removerepeatedelement(element, index) {
         productinaddtocart = localStorage.getItem("productinaddtocart");
         producttopush = JSON.parse(productinaddtocart);
-        for (i = index; i <producttopush.length; i++)
-            {if (producttopush[i].productcode == element.productcode)
+        for (i = index; i < producttopush.length; i++) {
+            if (producttopush[i].productcode == element.productcode)
                 producttopush.splice(i, i);
-            }
-            localStorage.setItem("productinaddtocart", JSON.stringify(producttopush));   
+        }
+        localStorage.setItem("productinaddtocart", JSON.stringify(producttopush));
     }
     productinaddtocart = localStorage.getItem("productinaddtocart");
     producttopush = JSON.parse(productinaddtocart);
