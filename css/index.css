@@ -311,11 +311,8 @@ body
     width: 100%;
     height:440px;
     overflow: hidden;
-    /* align-items: center;
-    justify-content: center; */
-    background-color:#30dfd6;
-    border-top: 2px solid rgba(0, 0, 0, 0.159);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.083);
+    background-color: white;
+    box-shadow: inset 2px 2px 8px #ddd;
     margin-top: 15px;
     flex-direction: column;
 }
@@ -344,8 +341,9 @@ body
     font-size: 0.9rem;
     overflow: hidden;
     transition: all 0.7s ease-in-out;
-    box-shadow: 2px 2px 2px black ;
-    border: 2px solid white;
+    /* box-shadow: 2px 2px 2px black ; */
+    border: 2px solid #ddd;
+    border-radius: 5px;
 }
 .product-slider .Laptop ul
 {
@@ -411,7 +409,8 @@ body
     box-sizing: border-box;
     color: white;
     z-index: 3;
-    position:realtive
+    position:realtive;
+    border-radius: 0 5px;
 }
 .Laptop-details h3
 {
