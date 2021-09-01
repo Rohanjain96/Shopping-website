@@ -87,6 +87,10 @@ body
 {
     color: yellow;
 }
+.header .Addtocart
+{
+    position: relative;
+}
 .header .Addtocart i
 {
     position: relative;
@@ -104,7 +108,7 @@ body
     position: absolute;
     content: attr(data-count);
     top: 3px;
-    right:19px;
+    right:0px;
     width: 4px;
     height: 4px;
     background-color: white;
@@ -116,7 +120,7 @@ body
     position: absolute;
     font-size: 0.5rem;
     top: -15px;
-    right:22px;
+    right:3px;
 }
 
 .addedtocart
@@ -124,11 +128,12 @@ body
     position: absolute;
     display: none;
     bottom: 0;
-    right: -110px;
+    right: -12px;
+    width: 120px;
     background-color: greenyellow;
     line-height: 18px;
     color:white;
-    transition: all 1s ease;
+    /* transition: right 5s ease; */
 }
 .header .bars
 {
@@ -422,7 +427,8 @@ body
     color: white;
     z-index: 3;
     position:realtive;
-    border-radius: 0 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .Laptop-details h3
 {
@@ -532,16 +538,7 @@ li i.fa-shopping-cart{
 }
 @media screen and (max-width:1270px)
 {
-    .header .Addtocart::before
-    {
-        right: 13px;
-    } 
 
-    .header .Addtocart .counter
-    {
-        right:16px;
-    }
-    
     .home
     {
         width: 290px;
@@ -593,18 +590,14 @@ li i.fa-shopping-cart{
         width: 205px;
         font-size: 0.8rem;
     }
+    .product-slider .slider-items .Laptop
+    {
+        min-width: 370px;
+    }
 }
 @media screen and (max-width:840px)
 {
-    .header .Addtocart::before
-    {
-        right: 7px;
-    } 
-    
-    .header .Addtocart .counter
-    {
-        right:9px;
-    }
+
     .product-slider .slider-items .Laptop
     {
         min-width: 335px;
@@ -657,15 +650,7 @@ li i.fa-shopping-cart{
     {
         display: block;
     }
-    .header .Addtocart::before
-    {
-        right: 9px;
-    } 
 
-    .header .Addtocart .counter
-    {
-        right:12px;
-    }
     .navigation 
     {
         display: none;
@@ -702,15 +687,7 @@ li i.fa-shopping-cart{
     {
         display: block;
     }
-    .header .Addtocart ::before
-    {
-        right: 0px;
-    } 
 
-    .header .Addtocart .counter
-    {
-        right:13px;
-    }
     .navigation
     {
         display: none;
@@ -722,15 +699,6 @@ li i.fa-shopping-cart{
 }
 
 @media screen and (max-width:680px) {
-    .header .Addtocart::before
-    {
-        right: 8px;
-    } 
-
-    .header .Addtocart .counter
-    {
-        right:10px;
-    }
     .product-slider
     {
         display: flex;
@@ -817,17 +785,10 @@ li i.fa-shopping-cart{
     {
         display: none;
     }
-    .header .Addtocart::before
-    {
-        right: 17px;
-    } 
 
-    .header .Addtocart .counter
-    {
-        right:19px;
-    }
     .addedtocart{
-        bottom:35px;
+        bottom: 35px;
+        font-size: 0.9rem;
     }
     .home
     {
@@ -891,16 +852,8 @@ li i.fa-shopping-cart{
         .navigation .bars
     {
         display: none;
-    }
-    .header .Addtocart::before
-    {
-        right: 8px;
-    } 
+     }
 
-    .header .Addtocart .counter
-    {
-        right:11px;
-    }
     .product-slider .slider-items
     {
         margin-top:50px;

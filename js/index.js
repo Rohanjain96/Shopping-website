@@ -160,7 +160,7 @@ function leftclicked() {
 
 function addtocart(e) {
     let addedtocart=document.querySelector(".addedtocart");
-    addedtocart.style.right = '0px';
+    addedtocart.style.right = '-12px';
     addedtocart.style.display = 'block';
     setTimeout(() => {
         addedtocart.style.right = '-120px';
