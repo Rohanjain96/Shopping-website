@@ -23,57 +23,52 @@
         </div>
         <div class="formbox ">
             <div class="form signinform">
-                <form>
+                <form name="signinform" onsubmit="return validatesigninform()">
                     <h3>Signin</h3>
                     <div class="inputbox">
-                        <input type="email" name="Email" id="Email" required>
-                        <label for=" Email ">Email:</label>
+                        <input type="email" name="Email" id="signinEmail" required>
+                        <label name=" signinEmail ">Email:</label>
+                        <span class="formerror"></span>
                     </div>
                     <div class="inputbox">
-                        <input type="password" name="Password" id="Password" required>
-                        <label for="Password ">Password:</label>
+                        <input type="password" name="Password" id="signinPassword" required>
+                        <label name="signinPassword ">Password:</label>
+                        <span class="formerror"></span>
                     </div>
                     <button>Submit</button>
                     <a href="#">Forgot Password</a>
                 </form>
             </div>
             <div class="form signupform">
-                <form>
+                <form name="signupform" onsubmit="return validatesignupform()">
                     <h3>Signup</h3>
                     <div class="inputbox">
                         <input type="text" name="Name" id="Name" required>
-                        <label for="Name">Name:</label>
+                        <label name="Name">Name:</label>
+                        <span class="formerror"></span>
                     </div>
                     <div class="inputbox">
-                        <input type="email" name="Email" id="Email" required>
-                        <label for=" Email ">Email:</label>
+                        <input type="email" name="Email" id="signupEmail" required>
+                        <label name=" signupEmail ">Email:</label>
+                        <span class="formerror"></span>
                     </div>
                     <div class="inputbox">
-                        <input type="password" name="Password" id="Password" required>
-                        <label for="Password ">Password:</label>
+                        <input type="password" name="Password" id="signupPassword" required>
+                        <label name="signupPassword ">Password:</label>
+                        <span class="formerror"></span>
                     </div>
                     <div class="inputbox">
-                        <input type="password" name="Password" id="Password" required>
-                        <label for="Password">Confirm Password:</label>
+                        <input type="password" name="confirmPassword" id="signupconfirmPassword" required>
+                        <label name="signupconfirmPassword">Confirm Password:</label>
+                        <span class="formerror"></span>
                     </div>
-                    <button>Submit</button>
+                    <button type="submit">Submit</button>
                     <a href="#">Forgot Password?</a>
                 </form>
             </div>
         </div>
     </div>
 </body>
-<script>
-    const signin = document.querySelector('.signinbtn');
-    const signup = document.querySelector('.signupbtn');
-    const formbox = document.querySelector('.formbox');
-    const body = document.querySelector('body')
-    signup.onclick = function () {
-        formbox.classList.add('active');
-        body.style.backgroundColor = 'red';
-    }
-    signin.onclick = function () {
-        formbox.classList.remove('active');
-        body.style.backgroundColor = ' #48dbfb';
-    }
-</script>
+<script src="js/login.js"></script>
+
+</html>

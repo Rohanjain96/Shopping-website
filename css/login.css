@@ -131,9 +131,13 @@ margin: 20px;
 
 .formbox .inputbox
 {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
     position: relative;
     margin:15px;
     text-align: center;
+    width:200px;
 }
 .formbox .form h3
 {
@@ -160,14 +164,18 @@ margin: 20px;
     transition: 0.3s ease-in-out;
     
 }
-
+.formbox .inputbox .formerror
+{
+    color: red;
+    width:100%;
+}
 .formbox .inputbox input:focus ~ label
 {
     top:-15px;
 }
 
 .formbox button{
-    margin-top: 15px;
+    margin-top: 20px;
     width:200px;
     padding:5px;
     cursor: pointer;
