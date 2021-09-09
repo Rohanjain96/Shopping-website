@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/0a0b34b77d.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/phonesection.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@0,400;1,300;1,900&display=swap"
+        rel="stylesheet">
+    <title>Shopping Website</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Creating header -->
+        <div class="header">
+            <div class="bars" id="headerbtn" onclick="hamburgermenu()">
+                <a>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+            </div>
+            <label>Shopping website</label>
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Type to search.....">
+                <div class="search-icon">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="signin">
+                <a href="login.html">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="Whishlist">
+                <a>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="Addtocart">
+                <span class="counter" onload="settingcounter()"></span>
+                <a href="cart.html">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Creating navigation bars -->
+        <div class="navigation">
+            <div class="bars" id="navigationbtn" onclick="hamburgermenu()">
+                <a>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    All</a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Mobiles</a>
+                    </li>
+                    <li>
+                        <a href="#">phones</a>
+                    </li>
+                    <li>
+                        <a href="#">Electronics</a>
+                    </li>
+                    <li>
+                        <a href="#">Furniture</a>
+                    </li>
+                    <li>
+                        <a href="#">Men Clothes</a>
+                    </li>
+                    <li>
+                        <a href="#">Women Clothes</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Creating hamburger menu -->
+        <div class="side-bars" id="side-bars">
+            <div class="closebtn" onclick="clshamburgermenu()">
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+            </div>
+            <div class="side-bars-container">
+                <div class="side-containers">
+                    <ul>
+                        <li>
+                            <a href="#" class="sidemenu-heading ">Trending</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Best Sellers</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">New Releases</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-containers">
+                    <ul>
+                        <a href="#" class="sidemenu-heading">Shop By Departments</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Mobiles</a>
+                            <ul>
+                                <li>
+                                    <a href="#" class="sidemenudrop-items">All mobiles phone</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidemenudrop-items">Cases And covers</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidemenudrop-items">Screen guard </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidemenudrop-items">Power Banks </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidemenudrop-items">Earphones </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">phones</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Speakers</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Computers</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Men Fashion</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidemenu-items">Women fashion</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dealscontainer">
+            <div class="filtersections">
+                <div class="clsfiltersection" onclick="clshamburgfiltersection() ">
+                    <i class="fa fa-window-close" aria-hidden="true"></i>
+                </div>
+                <div class="filter-section">
+                    <h3>Search by products</h3>
+                    <label for=""><input type="checkbox" onclick="filter()" >Samsung</label>
+                    <label for=""><input type="checkbox" onclick="filter()">Redmi</label>
+                    <label for=""><input type="checkbox" onclick="filter()">OnePlus</label>
+                    <label for=""><input type="checkbox" onclick="filter()">Iqoo</label>
+                </div>
+                <div class="filter-section">
+                    <h3>Search by ram</h3>
+                    <label for=""><input type="checkbox" onclick="filter()">2GB</label>
+                    <label for=""><input type="checkbox" onclick="filter()">4GB</label>
+                    <label for=""><input type="checkbox" onclick="filter()">6GB</label>
+                    <label for=""><input type="checkbox" onclick="filter()">8Gb</label>
+                </div>
+                <div class="filter-section">
+                    <h3>Search by storage</h3>
+                    <label for=""><input type="checkbox" onclick="filter()">32GB</label>
+                    <label for=""><input type="checkbox" onclick="filter()">64GB</label>
+                    <label for=""><input type="checkbox" onclick="filter()">128GB</label>
+                </div>
+                <div class="filter-section">
+                    <h3>Search by price</h3>
+                    <label for=""><input type="radio" onclick="filter()">0-6,000</label>
+                    <label for=""><input type="radio" onclick="filter()">6,000-10,000</label>
+                    <label for=""><input type="radio" onclick="filter()">10,000-15,000</label>
+                    <label for=""><input type="radio" onclick="filter()">15,000-20,000</label>
+                    <label for=""><input type="radio" onclick="filter()">20,000-25,000</label>
+                    <label for=""><input type="radio" onclick="filter()">25,000-35,000</label>
+                </div>
+            </div>
+
+            <div class="dealsection">
+                <div class="big-banner">
+                    <img src="images/banner1.jpg" alt="">
+                </div>
+                <div class="big-banner">
+                    <img src="images/banner2.jpg" alt="">
+                </div>
+                <div class="big-banner">
+                    <img src="images/banner3.jpg" alt="">
+                </div>
+                <div class="product-slider" id="slider">
+                    <h3 class="Product-category font-effect-shadow-multiple">Top Deals On Smartphones </h3>
+                    <!-- Left/right button to slide the items -->
+                    <div id="left-slider-btn" onclick="leftclicked()">&#8249</div>
+                    <div id="right-slider-btn" onclick="rightclicked()">&#8250</div>
+                    <div class="slider-items" id="slider-items">
+                        <div class="phone" id="item-1">
+                            
+                            <div class="phone-image">
+                                <img src="images/redmi note 10 deal.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="phone" id="item-2">
+                            <div class="phone-image">
+                                <img src="images/rdemi 9A deal.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="phone" id="item-3">
+                            <div class="phone-image">
+                                <img src="images/samsung deal.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="phone" id="item-4">
+                            <div class="phone-image">
+                                <img src="images/mi 10 deal.jpg" alt="">
+                            </div>
+                            
+                        </div>
+                        <div class="phone" id="item-5">
+                            <div class="phone-image">
+                                <img src="images/mi mix deal.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="phone" id="item-6">
+                            <div class="phone-image">
+                                <img src="images/iqoo deal.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="phone" id="item-7">
+                            <div class="phone-image">
+                                <img src="images/one plus deal.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="big-banner">
+                    <img src="images/banner4.jpg" alt="">
+                </div>
+                
+                <div class="all-phones-container">
+                    <div class="filterdiv">
+                        <button onclick="hamburgerfiltersection()">Filter</button>
+                    </div>
+                    <div class="all-phone">
+                        <div class="smartphone">
+                            <div class="image">
+                                <a href="#"><img src="./images/redmi9.jpg" alt="lapImg"></a>
+                            </div>
+                            <div class="title">
+                                <a href="#">Redmi 9 (Sky Blue, 4GB RAM, 64GB Storage) | 2.3GHz Mediatek Helio G35 Octa core Processor</a>
+                            </div>
+                            <div class="price">
+                                <span><i class="fa fa-inr"></i> 9,499</span>
+                                <span>Inclusive of all taxes</span>
+                            </div>
+                        </div>
+                        <div class="smartphone">
+                            <div class="image">
+                                <a href="#"><img src="./images/redmi9a.jpg" alt="lapImg"></a>
+                            </div>
+                            <div class="title">
+                                <a href="#">Redmi 9A (Nature Green, 2GB RAM, 32GB Storage) | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery</a>
+                            </div>
+                            <div class="price">
+                                <span><i class="fa fa-inr"></i> 6,999</span>
+                                <span>Inclusive of all taxes</span>
+                            </div>
+                        </div>
+                        <div class="smartphone">
+                            <div class="image">
+                                <a href="#"><img src="./images/iqoo 7 legend.jpg" alt="lapImg"></a>
+                            </div>
+                            <div class="title">
+                                <a href="#">iQOO 7 Legend 5G (Legendary Track Design, 8GB RAM, 128GB Storage) | 3GB Extended RAM |</a>
+                            </div>
+                            <div class="price">
+                                <span><i class="fa fa-inr"></i> 39,900</span>
+                                <span>Inclusive of all taxes</span>
+                            </div>
+                        </div>
+                        <div class="smartphone">
+                            <div class="image">
+                                <a href="#"><img src="./images/iqoo z3.jpg" alt="lapImg"></a>
+                            </div>
+                            <div class="title">
+                                <a href="#">iQOO Z3 5G (Ace Black, 6GB RAM, 128GB Storage) | India's First SD 768G 5G Processor | 55W FlashCharge </a>
+                            </div>
+                            <div class="price">
+                                <span><i class="fa fa-inr"></i> 19,900</span>
+                                <span>Inclusive of all taxes</span>
+                            </div>
+                        </div>
+                        <div class="smartphone">
+                            <div class="image">
+                                <a href="#"><img src="./images/samsung m21.jpg" alt="lapImg"></a>
+                            </div>
+                            <div class="title">
+                                <a href="#">Samsung Galaxy M21 2021 Edition (Charcoal Black , 4GB RAM, 64GB Storage) | FHD+ sAMOLED</a>
+                            </div>
+                            <div class="price">
+                                <span><i class="fa fa-inr"></i> 12,999</span>
+                                <span>Inclusive of all taxes</span>
+                            </div>
+                        </div>
+                        <div class="smartphone">
+                            <div class="image">
+                                <a href="#"><img src="./images/samsung 42.jpg" alt="lapImg"></a>
+                            </div>
+                            <div class="title">
+                                <a href="#">Samsung Galaxy M42 5G (Prism Dot Black, 6GB RAM, 128GB Storage)</a>
+                            </div>
+                            <div class="price">
+                                <span><i class="fa fa-inr"></i> 19,999</span>
+                                <span>Inclusive of all taxes</span>
+                            </div>
+                        </div>
+                        <div class="smartphone">
+                            <div class="image">
+                                <a href="#"><img src="./images/samsung M32.jpg" alt="lapImg"></a>
+                            </div>
+                            <div class="title">
+                                <a href="#">Samsung Galaxy M32 5G (Slate Black, 6GB RAM, 128GB Storage)</a>
+                            </div>
+                            <div class="price">
+                                <span><i class="fa fa-inr"></i> 20,999 </span>
+                                <span>Inclusive of all taxes</span>
+                            </div>
+                        </div>
+                        <div class="smartphone">
+                            <div class="image">
+                                <a href="#"><img src="./images/oneplus nord 2.jpg" alt="lapImg"></a>
+                            </div>
+                            <div class="title">
+                                <a href="#">OnePlus Nord 2 5G (Gray Sierra, 8GB RAM, 128GB Storage)</a>
+                            </div>
+                            <div class="price">
+                                <span><i class="fa fa-inr"></i> 30,999</span>
+                                <span>Inclusive of all taxes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <script src="js/phonesection.js"></script>
+</body>
+
+</html>

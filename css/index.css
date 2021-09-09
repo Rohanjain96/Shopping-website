@@ -630,6 +630,9 @@ li i.fa-shopping-cart{
         flex-direction: column;
         margin-top: 20px;
     }
+    .product-slider .slider-items::-webkit-scrollbar{
+        display: none;
+    }
     .product-slider .slider-items .Laptop
     {
         min-width: 320px;
