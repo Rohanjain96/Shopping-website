@@ -6,6 +6,7 @@ const rightbutton = document.getElementById("right-slider-btn");
 const items = document.getElementById("slider-items").children.length;
 const slider = document.getElementById("slider");
 let counter;
+let wishlistcounter;
 counter = localStorage.getItem("counter");
 console.log("set counter");
 if (counter == null) {
@@ -15,6 +16,16 @@ if (counter == null) {
 }
 else {
     document.getElementsByClassName("counter")[0].textContent = counter;
+}
+wishlistcounter = localStorage.getItem("wishlistcounter");
+console.log("set counter");
+if (wishlistcounter == null) {
+    wishlistcounter = 0;
+    localStorage.setItem('wishlistcounter', wishlistcounter);
+    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
+}
+else {
+    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
 }
 
 let productinaddtocart;
@@ -219,6 +230,64 @@ function addtocart(e) {
     producttopush.forEach((element, index) => {
         removerepeatedelement(element, index + 1);
     });
+
+
+}
+
+function addtowishlist(e) {
+    let addedtowishlist=document.querySelector(".addedtowishlist");
+    addedtowishlist.style.right = '-80px';
+    addedtowishlist.style.display = 'block';
+    setTimeout(() => {
+        addedtowishlist.style.right = '-120px';
+        addedtowishlist.style.display = 'none'; 
+    },2000);
+    
+    let detailproduct = {
+        productcode: e.id,
+        productprice: e.children[2].children[1].textContent,
+        producttitle: e.children[2].children[0].textContent,
+        imagepath: e.children[1].children[0].src,
+    };
+    wishlistcounter = localStorage.getItem("wishlistcounter");
+
+    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
+    productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
+    if (productinaddtowishlist == null || productinaddtowishlist == "[]") {
+        producttopush = [];
+        producttopush.push(detailproduct);
+                    localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
+                    wishlistcounter++;
+                    localStorage.setItem('wishlistcounter', wishlistcounter);
+                    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
+                    removerepeatedelement();
+            return;}
+
+    else {
+        producttopush = JSON.parse(productinaddtowishlist);
+        producttopush.push(detailproduct);
+        localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
+        removerepeatedelement();
+        return;
+    }
+
+    function removerepeatedelement(element, index) {
+        productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
+        producttopush = JSON.parse(productinaddtowishlist);
+        for (i = index; i < producttopush.length; i++) {
+            if (producttopush[i].productcode == element.productcode)
+             {   producttopush.splice(i, i);
+  
+            }
+
+        }
+        localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
+        productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
+        producttopush = JSON.parse(productinaddtowishlist);
+        producttopush.forEach((element, index) => {
+            removerepeatedelement(element, index + 1);
+        });
+    }
 
 
 }

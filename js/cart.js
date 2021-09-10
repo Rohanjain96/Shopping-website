@@ -1,15 +1,19 @@
 let html = "";
 let price = 0;
+let showmessage = document.querySelector(".showmessage");
 populate();
 function populate()
 {
+    showmessage.style.display='block';
     productinaddtocart = localStorage.getItem("productinaddtocart");
-if (productinaddtocart == null) {
+if (productinaddtocart == null||productinaddtocart =='[]') {
     producttopush = [];
+
 }
 
 else {
     producttopush = JSON.parse(productinaddtocart);
+    showmessage.style.display='none';
 }
     producttopush.forEach(element => {
         html += ` <div class="item-container">
@@ -33,9 +37,9 @@ else {
         </div>
         </div>`;
     });
+    document.getElementById("list").innerHTML = html;
 }
 
-document.getElementById("list").innerHTML = html;
 function changequantity(e, change) {
     productinaddtocart = localStorage.getItem("productinaddtocart");
     if (productinaddtocart == null) {
@@ -112,4 +116,5 @@ function removefromcart(e)
         }
     });
     location.reload();
+    showmessage.style.display = 'block';
 }

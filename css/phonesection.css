@@ -271,14 +271,22 @@ body
 
 .filterdiv
 {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.652);
     display: none;
-    justify-content: end;
-    position: sticky;
-    top:0;
-    left:0;
-    z-index: 100;
+    position: fixed;
+    top:50%;
+    left:-4%;
+    width: auto;
+    transform: rotate(90deg);
+    z-index: 10;
+}
+.filterdiv button
+{
+    padding:5px;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.563);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
 }
 
 .filtersections
@@ -507,8 +515,8 @@ margin: 5px auto;
         position: fixed;
         width:200px;
         left:-200px;
-        top:25px;
-        z-index: 10;
+        top:0px;
+        z-index: 11;
     }
     .filtersections .clsfiltersection
 {
