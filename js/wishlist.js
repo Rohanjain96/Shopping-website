@@ -24,11 +24,11 @@ else {
             </div>
             <div class="item-name">${element.producttitle}</div>
             <div class="price"><i class="fa fa-inr">${element.productprice}</i></div>
-            <div class="rem-btn" style="color: black;" onclick="removefromwishlist(this.parentElement)">
-                Remove
-            </div>
             <div class="addtocart-btn" style="color: black;" onclick="addtocart(this.parentElement)">
                 Add to cart
+            </div>
+            <div class="rem-btn" style="color: black;" onclick="removefromwishlist(this.parentElement)">
+                Remove
             </div>
         </div>
     </div>`;

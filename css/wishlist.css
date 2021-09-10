@@ -123,16 +123,6 @@ section{
     border-radius: 10px;
 }
 
-.img-container span {
-    background-color: cornflowerblue;
-    color: white;
-    position: absolute;
-bottom: 0;
-right: 0%;
-    font-size: 2rem;
-    padding: 0px 5px;
-    border-radius: 14px 0px 8px;
-}
 .price
 {
     font-size: 2rem;
@@ -266,15 +256,18 @@ right: 0%;
         font-size: 3.5rem;
     }
     .img-container {
-        height: 105px;
+        height: 130px;
         width: 310px;
     }
     .img-container span{
         bottom: -2px;
     }
-
+    .item-name
+    {
+        width:50%;
+    }
     .price{
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         margin-right: 10px;
     }
     .rem-btn{
@@ -284,9 +277,10 @@ right: 0%;
         margin-right: 22px;
     }
     .addtocart-btn{
-        font-size: 1.5rem;
+        font-size: 0.9rem;
         background-color: white;
-        padding: 6px 7px;
+        padding: 12px;
+        width: 80px;
         margin-right: 22px;
     }
 }
