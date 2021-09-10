@@ -1,10 +1,12 @@
 let html = "";
 let price = 0;
 let showmessage = document.querySelector(".showmessage");
+let list = document.querySelector("#list");
 populate();
 function populate()
 {
     showmessage.style.display='block';
+    list.style.display='none';
     productinaddtocart = localStorage.getItem("productinaddtocart");
 if (productinaddtocart == null||productinaddtocart =='[]') {
     producttopush = [];
@@ -14,6 +16,7 @@ if (productinaddtocart == null||productinaddtocart =='[]') {
 else {
     producttopush = JSON.parse(productinaddtocart);
     showmessage.style.display='none';
+    list.style.display='block';
 }
     producttopush.forEach(element => {
         html += ` <div class="item-container">
@@ -117,4 +120,5 @@ function removefromcart(e)
     });
     location.reload();
     showmessage.style.display = 'block';
+    list.style.display='none';
 }

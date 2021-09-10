@@ -1,9 +1,11 @@
 let html = "";
 let showmessage = document.querySelector(".showmessage");
+let list = document.querySelector("#list");
 populate();
 function populate()
 {
     showmessage.style.display='block';
+    list.style.display='none';
     productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
 if (productinaddtowishlist == null||productinaddtowishlist =="[]") {
     producttopush = [];
@@ -12,6 +14,7 @@ if (productinaddtowishlist == null||productinaddtowishlist =="[]") {
 else {
     producttopush = JSON.parse(productinaddtowishlist);
     showmessage.style.display='none';
+    list.style.display='block';
 }
     producttopush.forEach(element => {
         html += ` <div class="item-container">
@@ -118,6 +121,7 @@ function removefromwishlist(e)
     if (productinaddtowishlist == null) {
         producttopush = [];
         showmessage.style.display = 'block';
+        list.style.display='none';
     }
     location.reload();
 }

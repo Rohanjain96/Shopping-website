@@ -66,7 +66,11 @@ section{
     min-height: 63vh;
     width: 169vw;
     background-color: white;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     padding: 50px;
 
 }
@@ -145,34 +149,7 @@ right: 0%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }
-.quantity
-{
-    font-size: 1.7rem;
-    font-weight: bold;
-    background-color: white;
-    width: 100px;
-    height: 38px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.inc-count-btn,
-.desc-count-btn{
-    font-size: 2rem;
-    font-weight: 900;
-    cursor: pointer;
-    background-color: white;
-    width: 38px;
-    text-align: center;
-    height: 37px;
-    border: 2px solid black;
-    border-radius: 4px;
-}
-.inc-count-btn:hover,
-.desc-count-btn:hover{
-    background-color:cornflowerblue;
-    color: white !important;
-    padding: 4px 7px;
-}
+
 .rem-btn{
     font-size: 1.5rem;
     background-color: white;
@@ -301,6 +278,12 @@ right: 0%;
         margin-right: 10px;
     }
     .rem-btn{
+        font-size: 1.5rem;
+        background-color: white;
+        padding: 6px 7px;
+        margin-right: 22px;
+    }
+    .addtocart-btn{
         font-size: 1.5rem;
         background-color: white;
         padding: 6px 7px;
