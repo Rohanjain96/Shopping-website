@@ -15,7 +15,17 @@ if (counter == null) {
 else {
     document.getElementsByClassName("counter")[0].textContent = counter;
 }
-
+let wishlistcounter;
+wishlistcounter = localStorage.getItem("wishlistcounter");
+console.log("set counter");
+if (wishlistcounter == null) {
+    wishlistcounter = 0;
+    localStorage.setItem('wishlistcounter', wishlistcounter);
+    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
+}
+else {
+    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
+}
 function changemainimage(e)
 {
     let html='';

@@ -1,5 +1,6 @@
 const sidebars = document.getElementById("side-bars");
 const filtersection = document.querySelector(".filtersections");
+let wishlistcounter;
 function hamburgermenu() {
     sidebars.style.left = '0';
 }
@@ -22,6 +23,16 @@ if (counter == null) {
 }
 else {
     document.getElementsByClassName("counter")[0].textContent = counter;
+}
+wishlistcounter = localStorage.getItem("wishlistcounter");
+console.log("set counter");
+if (wishlistcounter == null) {
+    wishlistcounter = 0;
+    localStorage.setItem('wishlistcounter', wishlistcounter);
+    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
+}
+else {
+    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
 }
 const leftbutton = document.getElementById("left-slider-btn");
 const rightbutton = document.getElementById("right-slider-btn");

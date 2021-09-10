@@ -132,6 +132,42 @@ body
     color:white;
     /* transition: right 5s ease; */
 }
+.Whishlist
+{
+    position: relative;
+}
+.header .Whishlist .wishlistcounter
+{
+    position: absolute;
+    font-size: 0.5rem;
+    top: -15px;
+    right:-5px;
+}
+.header .Whishlist::before
+{
+    position: absolute;
+    content: attr(data-count);
+    top: 3px;
+    right:-7px;
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    padding: 4px;
+    border-radius: 50px;
+}
+
+.addedtowishlist
+{
+    position: absolute;
+    display: none;
+    bottom: 0;
+    right: -80px;
+    width: 150px;
+    background-color: greenyellow;
+    line-height: 18px;
+    color:white;
+    /* transition: right 5s ease; */
+}
 .header .bars
 {
     display: none;
