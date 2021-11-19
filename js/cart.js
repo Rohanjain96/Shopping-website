@@ -61,13 +61,16 @@ function changequantity(e, change) {
             return;
         }
     });
-    console.log(change);
     counter = localStorage.getItem("counter");
     if (change == 1) {
         counter++;
     }
     else if (change == -1) {
         counter = counter - 1;
+        if( counter==0)
+        {
+            removefromcart(e);
+        }
     }
     localStorage.setItem('counter', counter);
     calculateprice();
@@ -86,13 +89,9 @@ function calculateprice() {
         producttopush = JSON.parse(productinaddtocart);
     }
     producttopush.forEach(element => {
-        console.log(element.qty);
             console.log("comma remove");
             element.productprice = element.productprice.replace(",", "");
-
-            console.log(element.productprice);
         price = price + parseInt(element.qty) * parseInt(element.productprice);
-        console.log(price);
     });
     let newhtml= `<div class="price"><i class="fa fa-inr"> ${price}</i></div>`
     console.log( document.getElementsByClassName("totalPrice")[0]);
