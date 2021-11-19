@@ -58,6 +58,11 @@ function changequantity(e, change) {
             e.children[0].children[1].textContent =  `x${element.qty}`;
             e.children[3].innerHTML = element.qty;
             localStorage.setItem("productinaddtocart", JSON.stringify(producttopush));
+            if(element.qty==0)
+            {
+                removefromcart(e);
+                e.style.display="none";
+            }
             return;
         }
     });
@@ -67,13 +72,10 @@ function changequantity(e, change) {
     }
     else if (change == -1) {
         counter = counter - 1;
-        if( counter==0)
-        {
-            removefromcart(e);
-        }
     }
     localStorage.setItem('counter', counter);
     calculateprice();
+    showmessages();
 }
 
 calculateprice();
@@ -89,12 +91,10 @@ function calculateprice() {
         producttopush = JSON.parse(productinaddtocart);
     }
     producttopush.forEach(element => {
-            console.log("comma remove");
             element.productprice = element.productprice.replace(",", "");
         price = price + parseInt(element.qty) * parseInt(element.productprice);
     });
     let newhtml= `<div class="price"><i class="fa fa-inr"> ${price}</i></div>`
-    console.log( document.getElementsByClassName("totalPrice")[0]);
     document.getElementsByClassName("totalPrice")[0].innerHTML=newhtml;
 }
 
@@ -117,7 +117,15 @@ function removefromcart(e)
             localStorage.setItem("productinaddtocart", JSON.stringify(producttopush));
         }
     });
-    location.reload();
-    showmessage.style.display = 'block';
-    list.style.display='none';
+    showmessages();
+}
+
+function showmessages()
+{
+    counter = localStorage.getItem("counter");
+    if(counter==0)
+    {
+        showmessage.style.display = 'block';
+        list.style.display='none';
+    }
 }
