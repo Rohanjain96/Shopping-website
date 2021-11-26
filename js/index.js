@@ -8,7 +8,6 @@ const slider = document.getElementById("slider");
 let counter;
 let wishlistcounter;
 counter = localStorage.getItem("counter");
-console.log("set counter");
 if (counter == null) {
     counter = 0;
     localStorage.setItem('counter', counter);
@@ -18,7 +17,6 @@ else {
     document.getElementsByClassName("counter")[0].textContent = counter;
 }
 wishlistcounter = localStorage.getItem("wishlistcounter");
-console.log("set counter");
 if (wishlistcounter == null) {
     wishlistcounter = 0;
     localStorage.setItem('wishlistcounter', wishlistcounter);
@@ -30,7 +28,6 @@ else {
 
 let productinaddtocart;
 let producttopush;
-console.log(counter);
 let responsiveslider = [
     { left: 1, right: 4 },
     { left: 1, right: 3 },
@@ -170,14 +167,14 @@ function leftclicked() {
 }
 
 function addtocart(e) {
-    let addedtocart=document.querySelector(".addedtocart");
+    let addedtocart = document.querySelector(".addedtocart");
     addedtocart.style.right = '-12px';
     addedtocart.style.display = 'block';
     setTimeout(() => {
         addedtocart.style.right = '-120px';
-        addedtocart.style.display = 'none'; 
-    },2000);
-    
+        addedtocart.style.display = 'none';
+    }, 2000);
+
     let detailproduct = {
         productcode: e.id,
         productprice: e.children[2].children[1].textContent,
@@ -202,21 +199,19 @@ function addtocart(e) {
     }
     producttopush.forEach(element => {
         if (element.productcode == e.id) {
-            console.log("qty increase");
             element.qty += 1;
             localStorage.setItem("productinaddtocart", JSON.stringify(producttopush));
             return;
 
         }
         else {
-            console.log(" first push of element");
             producttopush.push(detailproduct);
             localStorage.setItem("productinaddtocart", JSON.stringify(producttopush));
             return;
         }
     });
 
-    function removerepeatedelement(element, index) {
+    function removeatcrepeatedelement(element, index) {
         productinaddtocart = localStorage.getItem("productinaddtocart");
         producttopush = JSON.parse(productinaddtocart);
         for (i = index; i < producttopush.length; i++) {
@@ -228,21 +223,21 @@ function addtocart(e) {
     productinaddtocart = localStorage.getItem("productinaddtocart");
     producttopush = JSON.parse(productinaddtocart);
     producttopush.forEach((element, index) => {
-        removerepeatedelement(element, index + 1);
+        removeatcrepeatedelement(element, index + 1);
     });
 
 
 }
 
 function addtowishlist(e) {
-    let addedtowishlist=document.querySelector(".addedtowishlist");
+    let addedtowishlist = document.querySelector(".addedtowishlist");
     addedtowishlist.style.right = '-80px';
     addedtowishlist.style.display = 'block';
     setTimeout(() => {
         addedtowishlist.style.right = '-120px';
-        addedtowishlist.style.display = 'none'; 
-    },2000);
-    
+        addedtowishlist.style.display = 'none';
+    }, 2000);
+
     let detailproduct = {
         productcode: e.id,
         productprice: e.children[2].children[1].textContent,
@@ -256,38 +251,45 @@ function addtowishlist(e) {
     if (productinaddtowishlist == null || productinaddtowishlist == "[]") {
         producttopush = [];
         producttopush.push(detailproduct);
-                    localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
-                    wishlistcounter++;
-                    localStorage.setItem('wishlistcounter', wishlistcounter);
-                    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
-                    removerepeatedelement();
-            return;}
-
-    else {
-        producttopush = JSON.parse(productinaddtowishlist);
-        producttopush.push(detailproduct);
         localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
-        removerepeatedelement();
+        wishlistcounter++;
+        localStorage.setItem('wishlistcounter', wishlistcounter);
+        document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
         return;
     }
-
-    function removerepeatedelement(element, index) {
+    else {
+        producttopush = JSON.parse(productinaddtowishlist);
+    }
+    producttopush.forEach(element => {
+        if (element.productcode == e.id) {
+            return;
+        }
+        else {
+            producttopush.push(detailproduct);
+            localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
+            wishlistcounter++;
+            localStorage.setItem('wishlistcounter', wishlistcounter);
+            document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
+            return;
+        }
+    });
+    function removeatwrepeatedelement(element, index) {
         productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
         producttopush = JSON.parse(productinaddtowishlist);
         for (i = index; i < producttopush.length; i++) {
-            if (producttopush[i].productcode == element.productcode)
-             {   producttopush.splice(i, i);
-  
+            if (producttopush[i].productcode == element.productcode) {
+                producttopush.splice(i, i);
+                wishlistcounter = localStorage.getItem("wishlistcounter");
+                wishlistcounter--;
+                localStorage.setItem('wishlistcounter', wishlistcounter);
+                document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
             }
-
         }
         localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
-        productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
-        producttopush = JSON.parse(productinaddtowishlist);
-        producttopush.forEach((element, index) => {
-            removerepeatedelement(element, index + 1);
-        });
     }
-
-
+    productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
+    producttopush = JSON.parse(productinaddtowishlist);
+    producttopush.forEach((element, index) => {
+        removeatwrepeatedelement(element, index + 1);
+    });
 }
