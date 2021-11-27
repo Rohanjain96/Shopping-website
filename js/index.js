@@ -245,14 +245,14 @@ function addtowishlist(e) {
         imagepath: e.children[1].children[0].src,
     };
     wishlistcounter = localStorage.getItem("wishlistcounter");
-
+    wishlistcounter++;
+    localStorage.setItem('wishlistcounter', wishlistcounter);
     document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
     productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
     if (productinaddtowishlist == null || productinaddtowishlist == "[]") {
         producttopush = [];
         producttopush.push(detailproduct);
         localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
-        wishlistcounter++;
         localStorage.setItem('wishlistcounter', wishlistcounter);
         document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
         return;
@@ -262,14 +262,14 @@ function addtowishlist(e) {
     }
     producttopush.forEach(element => {
         if (element.productcode == e.id) {
+            wishlistcounter--;
+            localStorage.setItem('wishlistcounter', wishlistcounter);
+            document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
             return;
         }
         else {
             producttopush.push(detailproduct);
             localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
-            wishlistcounter++;
-            localStorage.setItem('wishlistcounter', wishlistcounter);
-            document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
             return;
         }
     });
@@ -280,9 +280,6 @@ function addtowishlist(e) {
             if (producttopush[i].productcode == element.productcode) {
                 producttopush.splice(i, i);
                 wishlistcounter = localStorage.getItem("wishlistcounter");
-                wishlistcounter--;
-                localStorage.setItem('wishlistcounter', wishlistcounter);
-                document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
             }
         }
         localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
@@ -290,6 +287,7 @@ function addtowishlist(e) {
     productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
     producttopush = JSON.parse(productinaddtowishlist);
     producttopush.forEach((element, index) => {
+        if(index>=1)
         removeatwrepeatedelement(element, index + 1);
     });
 }
