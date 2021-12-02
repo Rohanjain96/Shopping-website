@@ -638,16 +638,6 @@ li i.fa-shopping-cart{
 
 @media screen and (max-width:768px) 
 {
-    .header .search-box
-    {
-        min-width: 60%;
-        
-    }
-    .header .bars
-    {
-        display: block;
-    }
-
     .home
     {
         width: calc(98%/2);
@@ -679,11 +669,6 @@ li i.fa-shopping-cart{
     }
 }
 @media screen and (max-width:750px) {
- 
-    .navigation 
-    {
-        display: none;
-    }
     .product-slider .slider-items
     {
         overflow-x: auto;
@@ -693,31 +678,6 @@ li i.fa-shopping-cart{
     
 }
 
-@media screen and (max-width:700px) {
-    .header label
-    {
-        margin-left: 10px;
-        font-size: 1.2rem;
-    }
-    .header .search-box
-    {
-        min-width: 50%;
-    }
-    
-    .header .bars
-    {
-        display: block;
-    }
-
-    .navigation
-    {
-        display: none;
-    }
-    .navigation .bars
-    {
-        display: none;
-    }
-}
 
 @media screen and (max-width:680px) {
     .product-slider
@@ -768,49 +728,6 @@ li i.fa-shopping-cart{
     }
 }
 @media screen and (max-width:505px) {
-    
-    .header{
-        position: sticky;
-        height: 90px;
-        justify-content: space-around;
-        font-size: 1.2rem;
-        z-index: 50;
-    }
-    .header label
-    {
-        margin-left: 2px;
-        font-size: 1.2rem;
-    }
-    .header .search-box
-    {
-        position: absolute;
-        width:94%;
-        height: 20px;
-        top:50px;
-        margin: 15px 10px;
-        
-    }
-    .header .search-box input
-    {
-        margin-bottom: 20px;
-    }
-    .header .search-box .search-icon
-    {
-        margin-bottom: 20px;
-    }
-    .header .bars
-    {
-        display: block;
-    }
-        .navigation .bars
-    {
-        display: none;
-    }
-
-    .addedtocart{
-        bottom: 35px;
-        font-size: 0.9rem;
-    }
     .home
     {
         width: 100%;
@@ -836,44 +753,6 @@ li i.fa-shopping-cart{
     }
 }
 @media screen and (max-width:315px) {
-    
-    .header{
-        position: sticky;
-        height: 70px;
-        /* justify-content: space-around; */
-        font-size: 1.2rem;
-        z-index: 50;
-    }
-    .header label
-    {
-        margin-left: 4px;
-        font-size: 1.2rem;
-    }
-    .header .search-box
-    {
-        position: absolute;
-        width:94%;
-        height: 20px;
-        top:40px;
-        margin: 10px 10px;
-        
-    }
-    .header .search-box input
-    {
-        margin-bottom: 20px;
-    }
-    .header .search-box .search-icon
-    {
-        margin-bottom: 20px;
-    }
-    .header .bars
-    {
-        display: block;
-    }
-        .navigation .bars
-    {
-        display: none;
-     }
 
     .product-slider .slider-items
     {

@@ -13,136 +13,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@0,400;1,300;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <title>Shopping Website</title>
 </head>
 
 <body>
     <div class="container">
         <!-- Creating header -->
-        <div class="header">
-            <div class="bars" id="headerbtn" onclick="hamburgermenu()">
-                <a>
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </a>
-            </div>
-            <label>Shopping website</label>
-            <div class="search-box">
-                <input type="text" id="search" placeholder="Type to search.....">
-                <div class="search-icon">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="signin">
-                <a href="login.html">
-                    <i class="fa fa-user-circle" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="Whishlist">
-                <div class="addedtowishlist"> Added to wishlist</div>
-                <div class="wishlistcounter" onload="settingcounter()"></div>
-                <a href="wishlist.html">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="Addtocart">
-                <span class="counter" onload="settingcounter()"></span>
-                <a href="cart.html">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
-        <!-- Creating navigation bars -->
-        <div class="navigation">
-            <div class="bars" id="navigationbtn" onclick="hamburgermenu()">
-                <a>
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                    All</a>
-            </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Mobiles</a>
-                    </li>
-                    <li>
-                        <a href="#">phones</a>
-                    </li>
-                    <li>
-                        <a href="#">Electronics</a>
-                    </li>
-                    <li>
-                        <a href="#">Furniture</a>
-                    </li>
-                    <li>
-                        <a href="#">Men Clothes</a>
-                    </li>
-                    <li>
-                        <a href="#">Women Clothes</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <!-- Creating hamburger menu -->
-        <div class="side-bars" id="side-bars">
-            <div class="closebtn" onclick="clshamburgermenu()">
-                <i class="fa fa-window-close" aria-hidden="true"></i>
-            </div>
-            <div class="side-bars-container">
-                <div class="side-containers">
-                    <ul>
-                        <li>
-                            <a href="#" class="sidemenu-heading ">Trending</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Best Sellers</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">New Releases</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="side-containers">
-                    <ul>
-                        <a href="#" class="sidemenu-heading">Shop By Departments</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Mobiles</a>
-                            <ul>
-                                <li>
-                                    <a href="#" class="sidemenudrop-items">All mobiles phone</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="sidemenudrop-items">Cases And covers</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="sidemenudrop-items">Screen guard </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="sidemenudrop-items">Power Banks </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="sidemenudrop-items">Earphones </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">phones</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Speakers</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Computers</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Men Fashion</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Women fashion</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <nav-bar></nav-bar>
         <div class="dealscontainer">
             <div class="filtersections">
                 <div class="clsfiltersection" onclick="clshamburgfiltersection() ">
@@ -346,6 +225,8 @@
 
         </div>
         <script src="js/phonesection.js"></script>
+        <script type="module" src="js/navBar.js"></script>
+
 </body>
 
 </html>

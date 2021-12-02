@@ -13,137 +13,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@0,400;1,300;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <title>Shopping Website</title>
 </head>
 
 <body>
     <div class="container">
         <!-- Creating header -->
-        <div class="header">
-            <div class="bars" id="headerbtn" onclick="hamburgermenu()">
-                <a>
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </a>
-            </div>
-            <label>Shopping website</label>
-            <div class="search-box">
-                <input type="text" id="search" placeholder="Type to search.....">
-                <div class="search-icon">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="signin">
-                <a href="login.html">
-                    <i class="fa fa-user-circle" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="Whishlist">
-                <div class="addedtowishlist"> Added to wishlist</div>
-                <div class="wishlistcounter" onload="settingcounter()"></div>
-                <a href="wishlist.html">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="Addtocart">
-                <span class="counter" onload="settingcounter()"></span>
-                <a href="cart.html">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
-        <!-- Creating navigation bars -->
-        <div class="navigation">
-            <div class="bars" id="navigationbtn" onclick="hamburgermenu()">
-                <a>
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                    All</a>
-            </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Mobiles</a>
-                    </li>
-                    <li>
-                        <a href="#">Laptops</a>
-                    </li>
-                    <li>
-                        <a href="#">Electronics</a>
-                    </li>
-                    <li>
-                        <a href="#">Furniture</a>
-                    </li>
-                    <li>
-                        <a href="#">Men Clothes</a>
-                    </li>
-                    <li>
-                        <a href="#">Women Clothes</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <!-- Creating hamburger menu -->
-        <div class="side-bars" id="side-bars">
-            <div class="closebtn" onclick="clshamburgermenu()">
-                <i class="fa fa-window-close" aria-hidden="true"></i>
-            </div>
-            <div class="side-bars-container">
-                <div class="side-containers">
-                    <ul>
-                        <li>
-                            <a href="#" class="sidemenu-heading ">Trending</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Best Sellers</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">New Releases</a>
-                        </li>  
-                    </ul>
-                </div>
-                <div class="side-containers">
-                    <ul>
-                            <a href="#" class="sidemenu-heading">Shop By Departments</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Mobiles</a>
-                            <ul>
-                                <li>
-                                    <a href="#" class="sidemenudrop-items">All mobiles phone</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="sidemenudrop-items">Cases And covers</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="sidemenudrop-items">Screen guard </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="sidemenudrop-items">Power Banks </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="sidemenudrop-items">Earphones </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Laptops</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Speakers</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Computers</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Men Fashion</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidemenu-items">Women fashion</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
+        <nav-bar></nav-bar>
         <!-- Creating product details from here -->
         <div class="product" id="item-1">
             <div class="product-showing-area">
@@ -152,16 +30,16 @@
                         <img src="images/laptop1.png" alt="">
                     </div>
                     <div class="picture-slider">
-                        <div class="otherimage" >  
+                        <div class="otherimage">
                             <img src="images/laptop1.png" onclick="changemainimage(this)" alt="">
                         </div>
-                        <div class="otherimage" >  
+                        <div class="otherimage">
                             <img src="images/laptop1_2.png" onclick="changemainimage(this)" alt="">
                         </div>
-                        <div class="otherimage" >
+                        <div class="otherimage">
                             <img src="images/laptop1_3.png" onclick="changemainimage(this)" alt="">
                         </div>
-                        <div class="otherimage" >
+                        <div class="otherimage">
                             <img src="images/laptop1_4.png" onclick="changemainimage(this)" alt="">
                         </div>
                     </div>
@@ -190,14 +68,14 @@
                                 M.R.P :
                             </td>
                             <td>
-                                <i class="fa fa-inr"></i>  46,200
+                                <i class="fa fa-inr"></i> 46,200
                             </td>
                         </tr>
                         <tr>
                             <td class="topic">
                                 Price :
                             </td>
-                            <td class="Price"> 
+                            <td class="Price">
                                 <i class="fa fa-inr"></i> 30,599
                             </td>
                         </tr>
@@ -220,7 +98,8 @@
                     </table>
                 </div>
                 <span class="deliver-date"> <span class="free-delivery">FREE delivery: </span> Friday, Aug 27</span>
-                <button class="mobileaddtocartbtn" onclick="addtocart(this.parentElement.parentElement)">Add to cart</button>
+                <button class="mobileaddtocartbtn" onclick="addtocart(this.parentElement.parentElement)">Add to
+                    cart</button>
                 <button class="mobilebuynowbtn">Buy Now</button>
                 <div class="product-info">
                     <table>
@@ -306,7 +185,7 @@
                 <button class="buynowbtn">Buy Now</button>
             </div>
         </div>
-        <div class="technical-details"  data-aos="fade-up" data-aos-duration="500">
+        <div class="technical-details" data-aos="fade-up" data-aos-duration="500">
             <h3> Technical-Details</h3>
             <table>
                 <tr>
@@ -322,7 +201,7 @@
                         Manufacturer
                     </td>
                     <td>
-                        ‎LENOVO COMPUTERS, Lenovo, Compal information technology (kunshan) CO., LTD., Address: No. 58,
+                        LENOVO COMPUTERS, Lenovo, Compal information technology (kunshan) CO., LTD., Address: No. 58,
                         the 1st street, Kunshan Export Processing Zone, Jiangsu, P.R.O.C. CHINA
                     </td>
                 </tr>
@@ -331,7 +210,7 @@
                         Series
                     </td>
                     <td>
-                        ‎V14 ADA
+                        V14 ADA
                     </td>
                 </tr>
                 <tr>
@@ -339,12 +218,12 @@
                         Colour
                     </td>
                     <td>
-                        ‎Iron Grey
+                        Iron Grey
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        Item Height ‎
+                        Item Height 
                     </td>
                     <td>
                         20 Millimeters
@@ -356,7 +235,7 @@
                         Item Width
                     </td>
                     <td>
-                        ‎24.1 Centimeters
+                        24.1 Centimeters
                     </td>
                 </tr>
                 <tr>
@@ -364,7 +243,7 @@
                         Standing screen display size
                     </td>
                     <td>
-                        ‎14 Inches
+                        14 Inches
                     </td>
                 </tr>
                 <tr>
@@ -372,7 +251,7 @@
                         Resolution
                     </td>
                     <td>
-                        ‎HD (1366 X 768)
+                        HD (1366 X 768)
                     </td>
                 </tr>
                 <tr>
@@ -380,7 +259,7 @@
                         Product Dimensions
                     </td>
                     <td>
-                        ‎32.7 x 24.1 x 2 cm; 1.6 Kilograms
+                        32.7 x 24.1 x 2 cm; 1.6 Kilograms
                     </td>
                 </tr>
                 <tr>
@@ -388,7 +267,7 @@
                         Item model number
                     </td>
                     <td>
-                        ‎Lenovo V14 ADA 82C6000KIH
+                        Lenovo V14 ADA 82C6000KIH
                     </td>
                 </tr>
                 <tr>
@@ -396,12 +275,12 @@
                         Processor Brand
                     </td>
                     <td>
-                        ‎Intel
+                        Intel
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        Processor Type ‎
+                        Processor Type 
                     </td>
                     <td>
                         Atom Z8700
@@ -409,7 +288,7 @@
                 </tr>
                 <tr>
                     <td>
-                        Processor Speed ‎
+                        Processor Speed 
                     </td>
                     <td>
                         2.6 GHz
@@ -420,7 +299,7 @@
                         Processor Count
                     </td>
                     <td>
-                        ‎2
+                        2
                     </td>
                 </tr>
                 <tr>
@@ -429,7 +308,7 @@
                         RAM Size
                     </td>
                     <td>
-                        ‎4 GB
+                        4 GB
                     </td>
                 </tr>
                 <tr>
@@ -437,7 +316,7 @@
                         Memory Technology
                     </td>
                     <td>
-                        ‎DDR4
+                        DDR4
                     </td>
                 </tr>
                 <tr>
@@ -446,12 +325,12 @@
                         Maximum Memory Supported
                     </td>
                     <td>
-                        ‎16 GB
+                        16 GB
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        Hard Drive Size ‎
+                        Hard Drive Size 
                     </td>
                     <td>
                         1 TB
@@ -462,7 +341,7 @@
                         Hard Drive Interface
                     </td>
                     <td>
-                        ‎ESATA
+                        ESATA
                     </td>
                 </tr>
                 <tr>
@@ -470,7 +349,7 @@
                         Hard Disk Rotational Speed
                     </td>
                     <td>
-                        ‎5400
+                        5400
                     </td>
                 </tr>
                 <tr>
@@ -478,7 +357,7 @@
                         Number of USB 3.0 Ports
                     </td>
                     <td>
-                        ‎2
+                        2
 
                     </td>
                 </tr>
@@ -487,7 +366,7 @@
                         Number of HDMI Ports
                     </td>
                     <td>
-                        ‎1
+                        1
                     </td>
                 </tr>
                 <tr>
@@ -495,7 +374,7 @@
                         Number of Audio-out Ports
                     </td>
                     <td>
-                        ‎1
+                        1
                     </td>
                 </tr>
                 <tr>
@@ -503,7 +382,7 @@
                         Optical Drive Type
                     </td>
                     <td>
-                        ‎No Optical Drive
+                        No Optical Drive
                     </td>
                 </tr>
                 <tr>
@@ -511,7 +390,7 @@
                         Operating System
                     </td>
                     <td>
-                        ‎DOS
+                        DOS
                     </td>
                 </tr>
                 <tr>
@@ -519,7 +398,7 @@
                         Average Battery Life (in hours)
                     </td>
                     <td>
-                        ‎5.5 Hours
+                        5.5 Hours
                     </td>
                 </tr>
                 <tr>
@@ -535,7 +414,7 @@
                         Included Components
                     </td>
                     <td>
-                        ‎Laptop, adaptor, user manual
+                        Laptop, adaptor, user manual
                     </td>
                 </tr>
                 <tr>
@@ -543,7 +422,7 @@
                         Manufacturer
                     </td>
                     <td>
-                        ‎LENOVO COMPUTERS
+                        LENOVO COMPUTERS
                     </td>
                 </tr>
                 <tr>
@@ -551,16 +430,17 @@
                         Item Weight
                     </td>
                     <td>
-                        ‎1 kg 600
+                        1 kg 600
                     </td>
                 </tr>
             </table>
         </div>
         <script src="js/laptop1.js"></script>
+        <script type="module" src="js/navBar.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
-          </script>
+        </script>
 </body>
 
 </html>

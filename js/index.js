@@ -5,26 +5,6 @@ const leftbutton = document.getElementById("left-slider-btn");
 const rightbutton = document.getElementById("right-slider-btn");
 const items = document.getElementById("slider-items").children.length;
 const slider = document.getElementById("slider");
-let counter;
-let wishlistcounter;
-counter = localStorage.getItem("counter");
-if (counter == null) {
-    counter = 0;
-    localStorage.setItem('counter', counter);
-    document.getElementsByClassName("counter")[0].textContent = counter;
-}
-else {
-    document.getElementsByClassName("counter")[0].textContent = counter;
-}
-wishlistcounter = localStorage.getItem("wishlistcounter");
-if (wishlistcounter == null) {
-    wishlistcounter = 0;
-    localStorage.setItem('wishlistcounter', wishlistcounter);
-    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
-}
-else {
-    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
-}
 
 let productinaddtocart;
 let producttopush;
@@ -34,9 +14,6 @@ let responsiveslider = [
     { left: 1, right: 2 },
     { left: 1, right: 2 },
 ];
-window.onload = () => {
-    document.getElementsByClassName("counter")[0].textContent = counter;
-};
 function hamburgermenu() {
     sidebars.style.left = '0';
 }
@@ -167,14 +144,6 @@ function leftclicked() {
 }
 
 function addtocart(e) {
-    let addedtocart = document.querySelector(".addedtocart");
-    addedtocart.style.right = '-12px';
-    addedtocart.style.display = 'block';
-    setTimeout(() => {
-        addedtocart.style.right = '-120px';
-        addedtocart.style.display = 'none';
-    }, 2000);
-
     let detailproduct = {
         productcode: e.id,
         productprice: e.children[2].children[1].textContent,
@@ -185,7 +154,6 @@ function addtocart(e) {
     counter = localStorage.getItem("counter");
     counter++;
     localStorage.setItem('counter', counter);
-    document.getElementsByClassName("counter")[0].textContent = counter;
     productinaddtocart = localStorage.getItem("productinaddtocart");
     if (productinaddtocart == null || productinaddtocart == "[]") {
         producttopush = [];
@@ -230,14 +198,6 @@ function addtocart(e) {
 }
 
 function addtowishlist(e) {
-    let addedtowishlist = document.querySelector(".addedtowishlist");
-    addedtowishlist.style.right = '-80px';
-    addedtowishlist.style.display = 'block';
-    setTimeout(() => {
-        addedtowishlist.style.right = '-120px';
-        addedtowishlist.style.display = 'none';
-    }, 2000);
-
     let detailproduct = {
         productcode: e.id,
         productprice: e.children[2].children[1].textContent,
@@ -247,14 +207,11 @@ function addtowishlist(e) {
     wishlistcounter = localStorage.getItem("wishlistcounter");
     wishlistcounter++;
     localStorage.setItem('wishlistcounter', wishlistcounter);
-    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
     productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
     if (productinaddtowishlist == null || productinaddtowishlist == "[]") {
         producttopush = [];
         producttopush.push(detailproduct);
         localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
-        localStorage.setItem('wishlistcounter', wishlistcounter);
-        document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
         return;
     }
     else {
@@ -263,8 +220,7 @@ function addtowishlist(e) {
     producttopush.forEach(element => {
         if (element.productcode == e.id) {
             wishlistcounter--;
-            localStorage.setItem('wishlistcounter', wishlistcounter);
-            document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
+            localStorage.setItem('wishlistcounter',wishlistcounter);
             return;
         }
         else {
@@ -280,6 +236,7 @@ function addtowishlist(e) {
             if (producttopush[i].productcode == element.productcode) {
                 producttopush.splice(i, i);
                 wishlistcounter = localStorage.getItem("wishlistcounter");
+                localStorage.setItem('wishlistcounter', wishlistcounter);
             }
         }
         localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
