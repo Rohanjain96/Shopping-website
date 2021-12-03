@@ -247,12 +247,14 @@ section{
         background-color: white;
         padding: 6px 7px;
         margin-right: 22px;
+        font-weight: bolder;
     }
     .addtocart-btn{
         font-size: 0.9rem;
         background-color: white;
         padding: 12px 7px;
         width: 80px;
+        font-weight: bolder;
         margin-right: 22px;
     }
 }
@@ -272,25 +274,37 @@ section{
 .addtocart-btn
 {
     width: 90px;
+    font-weight: bolder;
 }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 485px) {
     .addtocart-btn
     {
-        width: 100px;
+        width: 120px;
     }
     
 }
 @media screen and (max-width: 405px) {
     .addtocart-btn
     {
-        width: 110px;
+        width: 130px;
         margin-right: 15px;
     }
     
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
     body{
         zoom: 45%;
     }
+    .item-name
+{
+    width:50%;
+    margin: 0 10px;
+}
+
+.addtocart-btn
+{
+    width: 130px;
+    margin-right: 10px;
+}
 }
