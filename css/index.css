@@ -643,6 +643,12 @@ li i.fa-shopping-cart{
         width: calc(98%/2);
         font-size: 0.8rem;
     }
+
+    .home-itemtitle
+    { 
+        font-size: 1em;
+        font-weight: 900;
+    }
     .product-slider
     {
         display: flex;

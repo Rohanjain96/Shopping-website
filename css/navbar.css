@@ -294,27 +294,33 @@
     cursor: pointer;
 }
 
-@media screen and (max-width:768px) 
+@media screen and (max-width:900px) 
 {
     .header .search-box
     {
-        min-width: 60%;
-        
+        min-width: 70%;      
     }
+    
+}
+@media screen and (max-width:840px) 
+{
+    .header .search-box
+    {
+        min-width: 60%;      
+    }
+    
+}
+@media screen and (max-width:768px) {
     .header .bars
     {
         display: block;
     }
-
-}
-@media screen and (max-width:750px) {
- 
     .navigation 
     {
         display: none;
     }
-    
 }
+
 
 @media screen and (max-width:700px) {
     .header label

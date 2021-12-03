@@ -181,7 +181,6 @@ class Navbar extends HTMLElement {
 
         hamburgermenu(this);
         clshamburgermenu(this);
-        // clshamburgermenu(this);
     };
     attributeChangedCallback(name,oldval,newval)
     {
@@ -214,9 +213,11 @@ function atcshowmessage(elem)
 
 function hamburgermenu(elem)
 {
-    let sidebars = elem.shadowRoot.querySelector('#navigationbtn');
+    let navigationbtn = elem.shadowRoot.querySelector('#navigationbtn');
+    let headerbtn = elem.shadowRoot.querySelector('#headerbtn');
     let sidemenu = elem.shadowRoot.querySelector('#side-bars');
-    sidebars.addEventListener('click',()=>sidemenu.style.left = '0');
+    navigationbtn.addEventListener('click',()=>sidemenu.style.left = '0');
+    headerbtn.addEventListener('click',()=>sidemenu.style.left = '0');
 }
 
 function clshamburgermenu(elem) {
