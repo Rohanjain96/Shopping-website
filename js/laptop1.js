@@ -5,27 +5,7 @@ function hamburgermenu() {
 function clshamburgermenu() {
     sidebars.style.left = '-250px';
 }
-let counter;
-counter = localStorage.getItem("counter");
-if (counter == null) {
-    counter = 0;
-    localStorage.setItem('counter', counter);
-    document.getElementsByClassName("counter")[0].textContent = counter;
-}
-else {
-    document.getElementsByClassName("counter")[0].textContent = counter;
-}
-let wishlistcounter;
-wishlistcounter = localStorage.getItem("wishlistcounter");
-console.log("set counter");
-if (wishlistcounter == null) {
-    wishlistcounter = 0;
-    localStorage.setItem('wishlistcounter', wishlistcounter);
-    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
-}
-else {
-    document.getElementsByClassName("wishlistcounter")[0].textContent = wishlistcounter;
-}
+
 function changemainimage(e)
 {
     let html='';
@@ -42,7 +22,6 @@ function changemainimage(e)
 
 function addtocart(e) {
     let flag = 0;
-    console.log("product added")
     let detailproduct = {
         productcode: e.id,
         productprice: document.querySelector(".Price").innerText,
@@ -53,7 +32,6 @@ function addtocart(e) {
     counter = localStorage.getItem("counter");
     counter = parseInt(counter)+ parseInt(detailproduct.qty);
     localStorage.setItem('counter', counter);
-    document.getElementsByClassName("counter")[0].textContent = counter;
     
     productinaddtocart = localStorage.getItem("productinaddtocart");
     if (productinaddtocart == null || productinaddtocart == "[]" ) {
@@ -95,10 +73,4 @@ function addtocart(e) {
     producttopush.forEach((element, index) => {
         removerepeatedelement(element, index + 1);
     });
-// console.log(document.querySelector(".otherimage").children[0].src);
-// console.log(e.id);
-// let qty=document.getElementById("quantity").value;
-// counter = localStorage.getItem("counter");
-// counter = parseInt(counter)+ parseInt(qty);
-// console.log(counter);
  }

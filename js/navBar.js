@@ -159,7 +159,17 @@ class Navbar extends HTMLElement {
         }
 
         let addtocartbtn = document.querySelectorAll(".fa-shopping-cart");
+        let addtocartbtnlaptop = document.querySelectorAll(".Addtocartbtn");
         addtocartbtn.forEach((e)=>
+        {
+            e.addEventListener('click',()=>
+            {
+                let counter = localStorage.getItem('counter');
+                this.shadowRoot.querySelector(".counter").textContent = counter;
+                atcshowmessage(this);
+            })
+        })
+        addtocartbtnlaptop.forEach((e)=>
         {
             e.addEventListener('click',()=>
             {
