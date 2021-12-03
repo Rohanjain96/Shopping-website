@@ -115,6 +115,9 @@ function removefromcart(e)
             localStorage.setItem('counter', counter);
             producttopush.splice(index, 1);
             localStorage.setItem("productinaddtocart", JSON.stringify(producttopush));
+            let removingelement = list.children[index];
+            list.removeChild(removingelement);
+            calculateprice();
         }
     });
     showmessages();

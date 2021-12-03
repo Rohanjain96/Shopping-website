@@ -1,21 +1,21 @@
 let html = "";
 let showmessage = document.querySelector(".showmessage");
 let list = document.querySelector("#list");
-populate();
-function populate()
-{
-    showmessage.style.display='block';
-    list.style.display='none';
-    productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
-if (productinaddtowishlist == null||productinaddtowishlist =="[]") {
-    producttopush = [];
-}
 
-else {
-    producttopush = JSON.parse(productinaddtowishlist);
-    showmessage.style.display='none';
-    list.style.display='block';
-}
+populate();
+function populate() {
+    showmessage.style.display = 'block';
+    list.style.display = 'none';
+    productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
+    if (productinaddtowishlist == null || productinaddtowishlist == "[]") {
+        producttopush = [];
+    }
+
+    else {
+        producttopush = JSON.parse(productinaddtowishlist);
+        showmessage.style.display = 'none';
+        list.style.display = 'block';
+    }
     producttopush.forEach(element => {
         html += ` <div class="item-container">
         <div class="items" id=${element.productcode}>
@@ -35,7 +35,6 @@ else {
     });
     document.getElementById("list").innerHTML = html;
 }
-
 
 function addtocart(e) {
     console.log(e.children[0].children[0].src);
@@ -97,31 +96,36 @@ function addtocart(e) {
 
 
 
-function removefromwishlist(e)
-{
+function removefromwishlist(e) {
     productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
     if (productinaddtowishlist == null) {
         producttopush = [];
         showmessage.style.display = 'block';
     }
-    
+
     else {
         producttopush = JSON.parse(productinaddtowishlist);
     }
-    producttopush.forEach((element,index) => {
+    producttopush.forEach((element, index) => {
         if (element.productcode == e.id) {
             wishlistcounter = localStorage.getItem("wishlistcounter");
             wishlistcounter = wishlistcounter - 1;
             localStorage.setItem('wishlistcounter', wishlistcounter);
             producttopush.splice(index, 1);
             localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
+            let removingelement = list.children[index];
+            list.removeChild(removingelement);
         }
     });
+    showmessages();
+
+}
+function showmessages()
+{ 
     productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
-    if (productinaddtowishlist == null) {
+    if (productinaddtowishlist == null||productinaddtowishlist=='[]') {
         producttopush = [];
         showmessage.style.display = 'block';
-        list.style.display='none';
+        list.style.display = 'none';
     }
-    location.reload();
 }
