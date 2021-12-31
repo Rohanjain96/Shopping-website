@@ -122,7 +122,7 @@
     background-color: greenyellow;
     line-height: 18px;
     color:white;
-    /* transition: right 5s ease; */
+    transition: right 1s linear;
 }
 .Whishlist
 {
@@ -152,13 +152,14 @@
 {
     position: absolute;
     display: none;
-    bottom: 0;
-    right: -80px;
+    bottom: -3px;
+    right: -90px;
     width: 150px;
     background-color: greenyellow;
     line-height: 18px;
     color:white;
-    /* transition: right 5s ease; */
+    transition: right 0.5s linear;
+    z-index: 10000;
 }
 .header .bars
 {
@@ -396,6 +397,11 @@
     {
         width: 100%;
         font-size: 0.8rem;
+    }
+    .addedtowishlist
+    {
+        bottom: 35px;
+        font-size: smaller;
     }
 }
 @media screen and (max-width:460px){

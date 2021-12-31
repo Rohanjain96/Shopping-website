@@ -207,6 +207,7 @@ function addtowishlist(e) {
     wishlistcounter = localStorage.getItem("wishlistcounter");
     wishlistcounter++;
     localStorage.setItem('wishlistcounter', wishlistcounter);
+    var flag = 0;
     productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
     if (productinaddtowishlist == null || productinaddtowishlist == "[]") {
         producttopush = [];
@@ -219,24 +220,30 @@ function addtowishlist(e) {
     }
     producttopush.forEach(element => {
         if (element.productcode == e.id) {
-            wishlistcounter--;
-            localStorage.setItem('wishlistcounter',wishlistcounter);
-            return;
-        }
-        else {
-            producttopush.push(detailproduct);
-            localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
-            return;
+            flag = 1;
         }
     });
+    if(flag ==1)
+    {
+        wishlistcounter = localStorage.getItem("wishlistcounter");
+        wishlistcounter--;
+        localStorage.setItem("wishlistcounter",wishlistcounter);
+        return;
+    }
+    else {
+        producttopush.push(detailproduct);
+        console.log("not called");
+        localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
+        return;
+    }
     function removeatwrepeatedelement(element, index) {
         productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
         producttopush = JSON.parse(productinaddtowishlist);
         for (i = index; i < producttopush.length; i++) {
             if (producttopush[i].productcode == element.productcode) {
                 producttopush.splice(i, i);
-                wishlistcounter = localStorage.getItem("wishlistcounter");
-                localStorage.setItem('wishlistcounter', wishlistcounter);
+                // wishlistcounter = localStorage.getItem("wishlistcounter");
+                // localStorage.setItem('wishlistcounter', wishlistcounter);
             }
         }
         localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
