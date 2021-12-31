@@ -236,22 +236,4 @@ function addtowishlist(e) {
         localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
         return;
     }
-    function removeatwrepeatedelement(element, index) {
-        productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
-        producttopush = JSON.parse(productinaddtowishlist);
-        for (i = index; i < producttopush.length; i++) {
-            if (producttopush[i].productcode == element.productcode) {
-                producttopush.splice(i, i);
-                // wishlistcounter = localStorage.getItem("wishlistcounter");
-                // localStorage.setItem('wishlistcounter', wishlistcounter);
-            }
-        }
-        localStorage.setItem("productinaddtowishlist", JSON.stringify(producttopush));
-    }
-    productinaddtowishlist = localStorage.getItem("productinaddtowishlist");
-    producttopush = JSON.parse(productinaddtowishlist);
-    producttopush.forEach((element, index) => {
-        if(index>=1)
-        removeatwrepeatedelement(element, index + 1);
-    });
 }
