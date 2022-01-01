@@ -205,30 +205,29 @@ function atwshowmessage(elem)
 
     if (window.outerWidth >=505)
     {
-        addedtowishlist.style.right = '-70px';
-        addedtowishlist.style.display = 'block';
+        addedtowishlist.style.bottom = '0px';
+        addedtowishlist.style.opacity = '1';
     }
     
     else if(window.outerWidth<=504)
     {
-        addedtowishlist.style.right = '-80px';
-        addedtowishlist.style.display = 'block';
+        addedtowishlist.style.bottom = '0px';
+        addedtowishlist.style.opacity = '1';
     }
     setTimeout(() => {
-        addedtowishlist.style.right = '-120px';
-        addedtowishlist.style.right = '-30px';
-        addedtowishlist.style.display = 'none';
+        addedtowishlist.style.bottom = '50px';
+        addedtowishlist.style.opacity = '0';
     }, 2000);
 }
 
 function atcshowmessage(elem)
 {
     let addedtocart = elem.shadowRoot.querySelector(".addedtocart");
-    addedtocart.style.right = '-20px';
-    addedtowishlist.style.display = 'block';
+    addedtocart.style.bottom = '0';
+    addedtocart.style.opacity = '1';
     setTimeout(() => {
-        addedtocart.style.right = '-120px';
-        addedtowishlist.style.display = 'none';
+        addedtocart.style.bottom = '50px';
+        addedtocart.style.opacity = '0';
     }, 2000);
 }
 

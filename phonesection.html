@@ -19,20 +19,23 @@
 </head>
 
 <body>
+    <nav-bar></nav-bar>
     <div class="container">
         <!-- Creating header -->
-        <nav-bar></nav-bar>
-        <div class="dealscontainer">
+        <div class="filterdiv">
+            <button onclick="hamburgerfiltersection()">Filter <i class="fa fa-filter"></i></button>
+        </div>
+        <div class="filtercontainer">
+            <div class="clsfiltersection" onclick="clshamburgfiltersection() ">
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+            </div>
             <div class="filtersections">
-                <div class="clsfiltersection" onclick="clshamburgfiltersection() ">
-                    <i class="fa fa-window-close" aria-hidden="true"></i>
-                </div>
                 <div class="filter-section">
                     <h3>Search by products</h3>
                     <label for=""><input type="checkbox" onclick="filter()" >Samsung</label>
                     <label for=""><input type="checkbox" onclick="filter()">Redmi</label>
                     <label for=""><input type="checkbox" onclick="filter()">OnePlus</label>
-                    <label for=""><input type="checkbox" onclick="filter()">Iqoo</label>
+                    <label for=""><input type="checkbox" onclick="filter()">IQOO</label>
                 </div>
                 <div class="filter-section">
                     <h3>Search by ram</h3>
@@ -57,7 +60,8 @@
                     <label for=""><input type="radio" onclick="filter()">25,000-35,000</label>
                 </div>
             </div>
-
+        </div>
+        <div class="dealscontainer">
             <div class="dealsection">
                 <div class="big-banner">
                     <img src="images/banner1.jpg" alt="">
@@ -118,9 +122,7 @@
                 </div>
                 
                 <div class="all-phones-container">
-                    <div class="filterdiv">
-                        <button onclick="hamburgerfiltersection()">Filter <i class="fa fa-filter"></i></button>
-                    </div>
+
                     <div class="all-phone">
                         <div class="smartphone">
                             <div class="image">
@@ -151,7 +153,7 @@
                                 <a href="#"><img src="./images/iqoo 7 legend.jpg" alt="lapImg"></a>
                             </div>
                             <div class="title">
-                                <a href="#">iQOO 7 Legend 5G (Legendary Track Design, 8GB RAM, 128GB Storage) | 3GB Extended RAM |</a>
+                                <a href="#">IQOO 7 Legend 5G (Legendary Track Design, 8GB RAM, 128GB Storage) | 3GB Extended RAM |</a>
                             </div>
                             <div class="price">
                                 <span><i class="fa fa-inr"></i> 39,900</span>
@@ -163,7 +165,7 @@
                                 <a href="#"><img src="./images/iqoo z3.jpg" alt="lapImg"></a>
                             </div>
                             <div class="title">
-                                <a href="#">iQOO Z3 5G (Ace Black, 6GB RAM, 128GB Storage) | India's First SD 768G 5G Processor | 55W FlashCharge </a>
+                                <a href="#">IQOO Z3 5G (Ace Black, 6GB RAM, 128GB Storage) | India's First SD 768G 5G Processor | 55W FlashCharge </a>
                             </div>
                             <div class="price">
                                 <span><i class="fa fa-inr"></i> 19,900</span>
@@ -224,6 +226,7 @@
             </div>
 
         </div>
+    </div>
         <script src="js/phonesection.js"></script>
         <script type="module" src="js/navBar.js"></script>
 
