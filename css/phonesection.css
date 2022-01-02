@@ -44,7 +44,7 @@ body {
   width: 250px;
   top: 95px;
   left: 0px;
-  height: 575px;
+  height: 650px;
   display: flex;
   overflow-y: auto;
   transition: all 0.5s ease-in-out;
@@ -292,39 +292,6 @@ body {
   }
 }
 
-@media screen and (max-width: 750px) {
-  .header .search-box {
-    min-width: 60%;
-  }
-  .header .bars {
-    display: block;
-  }
-
-  .navigation {
-    display: none;
-  }
-}
-@media screen and (max-width: 700px) {
-  .header label {
-    margin-left: 10px;
-    font-size: 1.2rem;
-  }
-  .header .search-box {
-    min-width: 50%;
-  }
-
-  .header .bars {
-    display: block;
-  }
-
-  .navigation {
-    display: none;
-  }
-  .navigation .bars {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 600px) {
   .product-slider {
     display: flex;
@@ -358,34 +325,9 @@ body {
 }
 
 @media screen and (max-width: 505px) {
-  .header {
-    position: relative;
-    height: 90px;
-    justify-content: space-around;
-    font-size: 1.2rem;
-  }
-  .header label {
-    margin-left: 2px;
-    font-size: 1.2rem;
-  }
-  .header .search-box {
-    position: absolute;
-    width: 94%;
-    height: 20px;
-    top: 50px;
-    margin: 15px 10px;
-  }
-  .header .search-box input {
-    margin-bottom: 20px;
-  }
-  .header .search-box .search-icon {
-    margin-bottom: 20px;
-  }
-  .header .bars {
-    display: block;
-  }
-  .navigation .bars {
-    display: none;
+  .filtercontainer
+  {
+    top:90px;
   }
   .product-slider .slider-items .phone {
     max-width: 180px;
@@ -399,34 +341,4 @@ body {
     font-size: 1.2rem;
   }
 }
-@media screen and (max-width: 315px) {
-  .header {
-    position: relative;
-    height: 90px;
-    /* justify-content: space-around; */
-    font-size: 1.4rem;
-  }
-  .header label {
-    margin-left: 4px;
-    font-size: 1.2rem;
-  }
-  .header .search-box {
-    position: absolute;
-    width: 94%;
-    height: 20px;
-    top: 50px;
-    margin: 15px 10px;
-  }
-  .header .search-box input {
-    margin-bottom: 20px;
-  }
-  .header .search-box .search-icon {
-    margin-bottom: 20px;
-  }
-  .header .bars {
-    display: block;
-  }
-  .navigation .bars {
-    display: none;
-  }
-}
+

@@ -159,7 +159,6 @@
     line-height: 18px;
     color:white;
     transition: all 0.5s linear;
-    z-index: -1000;
 }
 .header .bars
 {
