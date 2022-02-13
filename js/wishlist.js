@@ -60,23 +60,22 @@ function addtocart(e) {
     else {
         producttopush = JSON.parse(productinaddtocart);
     }
-    producttopush.forEach(element => {
-        if (element.productcode == e.id) {
+    for(let i = 0;i<producttopush.length;i++ ) 
+    {
+        if (producttopush[i].productcode == e.id) {
             console.log("qty increase");
-            element.qty += 1;
-            localStorage.setItem("productinaddtocart", JSON.stringify(producttopush));
-            removefromwishlist(e);
-            return;
-
-        }
-        else {
-            console.log(" first push of element");
-            producttopush.push(detailproduct);
+            producttopush[i].qty = producttopush[i].qty +1;
             localStorage.setItem("productinaddtocart", JSON.stringify(producttopush));
             removefromwishlist(e);
             return;
         }
-    });
+    }
+        console.log(" first push of element");
+        producttopush.push(detailproduct);
+        localStorage.setItem("productinaddtocart", JSON.stringify(producttopush));
+        removefromwishlist(e);
+        return;
+    
 
     function removerepeatedelement(element, index) {
         productinaddtocart = localStorage.getItem("productinaddtocart");
